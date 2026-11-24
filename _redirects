@@ -1,0 +1,5 @@
+# Arquivos internos do repositório que não devem ser abertos pelo navegador
+/LEIA-ME.md          /  301
+/README.md           /  301
+/worker-contato/*    /  301
+/functions/*         /  301

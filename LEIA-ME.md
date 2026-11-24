@@ -42,10 +42,50 @@ sitemap.xml    mapa do site para o Google
 
 1. **Preços** (procure por `R$` no `index.html`). Os valores atuais são sugestões.
 2. **Promessas**: "resposta em até 24h", "poucas vagas por mês" e "ajustes incluídos" precisam ser verdade na prática.
-3. **Formulário**: crie um formulário grátis no Formspree e cole o endereço em `data-endpoint=""` no `<form>`.
-   Sem isso, o botão abre o app de e-mail do visitante com a mensagem pronta.
+3. **Formulário**: ative o envio de e-mails seguindo a seção "Formulário de contato" abaixo.
 4. **E-mail**: crie `contato@rutorin.com` no Email Routing da Cloudflare, encaminhando para o seu Yahoo.
-5. **Projetos**: textos de Skyward Legends e rutorin.com na Fase 5.
+5. **Projetos**: a Fase 5 mostra o exemplo fictício "Pixel Pato" e o próprio rutorin.com. Troque pelo primeiro case real
+   assim que tiver (mantenha sempre claro o que é exemplo e o que é trabalho de cliente).
+
+## Formulário de contato
+
+As mensagens do formulário chegam no **rutorin@yahoo.com**, enviadas pela própria Cloudflare (grátis, sem serviço de terceiros):
+
+```
+Visitante → formulário → /api/contato (functions/api/contato.js, roda no Cloudflare Pages)
+          → Worker "rutorin-contato" (worker-contato/) → e-mail para o seu Yahoo
+```
+
+O e-mail chega com o assunto `Novo contato [🇧🇷 PT] · Classe · Nome`. É só clicar em **Responder**: a resposta vai direto
+para a pessoa. O formulário tem proteção contra robôs (campo invisível e tempo mínimo na página).
+
+**Ativar (uma vez só):**
+
+1. Instale o **Node.js LTS** (nodejs.org), se ainda não tiver.
+2. No terminal, entre na pasta do Worker e publique:
+   ```
+   cd worker-contato
+   npx wrangler login
+   npx wrangler deploy
+   npx wrangler secret put DESTINO
+   ```
+   No último comando, digite `rutorin@yahoo.com` quando ele pedir. O e-mail fica guardado como segredo na Cloudflare,
+   fora do código, então não aparece no GitHub nem no site.
+3. No painel da Cloudflare: **Workers & Pages → rutorin-website → Settings → Bindings → Add → Service binding**.
+   - Variable name: `CONTATO`
+   - Service: `rutorin-contato`
+4. Em **Deployments**, clique em **Retry deployment** no último deploy (ou faça um novo `git push`), para o site
+   enxergar o binding.
+5. Envie uma mensagem de teste pelo site. Na primeira vez, olhe também a pasta de **spam** do Yahoo e marque como
+   "não é spam".
+
+**Se não chegar:** abra **Workers & Pages → rutorin-contato → Logs** e envie de novo. O log mostra o motivo
+(por exemplo `E_SENDER_DOMAIN_NOT_AVAILABLE`). Nesse caso, ative o envio para o domínio em **Email → Email Sending**
+no painel da Cloudflare. Enquanto o envio não funcionar, o site mostra ao visitante o endereço contato@rutorin.com,
+então nenhum contato se perde.
+
+Os arquivos `LEIA-ME.md`, `README.md`, `worker-contato/` e `functions/` não abrem no navegador
+(o arquivo `_redirects` manda essas URLs para a home).
 
 ## Idiomas (português e inglês)
 

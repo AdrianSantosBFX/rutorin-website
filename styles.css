@@ -173,6 +173,9 @@ h1 span{display:inline}
 .project img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-bottom:2px solid var(--line)}
 .project-body{padding:clamp(1.4rem,2.2vw,1.8rem)}
 .project-tag{display:inline-block;margin-bottom:10px;padding:3px 11px;border-radius:999px;background:var(--soft);color:var(--blue);font-size:.85rem;font-weight:600}
+.project-tag+.project-tag{margin-left:6px}
+.project-tag-demo{background:#fff4c2;color:#7a5a00}
+.project h3 small{font-size:.75em;font-weight:500;color:var(--ink-soft)}
 .project-side{display:grid;gap:clamp(1rem,2vw,1.6rem);align-content:start}
 .terminal{overflow:hidden;border-radius:20px;background:#050b36;border:2px solid #1d2d7a;box-shadow:0 6px 0 #1d2d7a}
 .terminal-bar{display:flex;align-items:center;gap:7px;padding:11px 16px;background:#0b1650;color:#8aa0e6;font-size:.85rem}
@@ -218,6 +221,7 @@ h1 span{display:inline}
 .contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:none;border-color:var(--blue);background:var(--white)}
 .contact-form textarea{resize:vertical;min-height:110px}
 .contact-form [aria-invalid="true"]{border-color:#e0306a}
+.hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .form-status{margin:0;min-height:1.4em;font-size:.95rem;color:var(--ink-soft);text-align:center}
 .form-status.is-error{color:#e0306a}
 .form-status.is-ok{color:#0f9d58}

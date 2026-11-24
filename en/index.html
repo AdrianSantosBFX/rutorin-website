@@ -284,16 +284,16 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="hud-chip">Level 5 · Save files</span>
-          <h2 id="proj-title">Projects I built from scratch.</h2>
-          <p>Code, design and copy, all made by me. Your project gets the same care.</p>
+          <h2 id="proj-title">See what I make.</h2>
+          <p>Demo projects and Rutorin's own website. Client case studies will show up here as they are delivered.</p>
         </div>
         <div class="projects">
           <article class="card project project-main reveal">
-            <img src="../assets/skyward-legends.webp" alt="Scene from Skyward Legends: floating islands in a blue sky" width="960" height="540" loading="lazy">
+            <img src="../assets/demo-pixel-pato-en.svg" alt="Landing page mockup for the made-up game Pixel Pato, with a Fictional example ribbon" width="960" height="540" loading="lazy">
             <div class="project-body">
-              <span class="project-tag">Game · JavaScript</span>
-              <h3>Skyward Legends</h3>
-              <p>A browser RPG with story, battles and choices, with the game engine written from scratch.</p>
+              <span class="project-tag project-tag-demo">Fictional example</span><span class="project-tag">Game landing page</span>
+              <h3>Pixel Pato <small>(made-up game)</small></h3>
+              <p>A demo landing page for an indie game that doesn't exist: title, wishlist call to action and press kit. It's the kind of page the Indie Launch Kit delivers.</p>
             </div>
           </article>
           <div class="project-side">
@@ -304,12 +304,13 @@
                 <p>This very site: illustration, Figma design, code and copy. Fast and hosted on Cloudflare.</p>
               </div>
             </article>
-            <div class="terminal reveal" role="img" aria-label="Status: stack HTML, CSS, JavaScript, Astro and Node; Discord and Twitch bots; Figma design; deployed on Cloudflare; currently accepting projects.">
+            <div class="terminal reveal" role="img" aria-label="Status: stack HTML, CSS, JavaScript, Astro and Node; Discord and Twitch bots; Figma design; AI with Claude Code and Gemini; deployed on Cloudflare; currently accepting projects.">
               <div class="terminal-bar"><i></i><i></i><i></i><span>rutorin://status</span></div>
               <pre><span class="t-line"><span class="t-dim">$</span> rutorin status --all</span>
 <span class="t-line"><span class="t-key">stack </span> HTML · CSS · JS · Astro · Node</span>
 <span class="t-line"><span class="t-key">bots  </span> Discord · Twitch</span>
 <span class="t-line"><span class="t-key">design</span> Figma</span>
+<span class="t-line"><span class="t-key">ai    </span> Claude Code · Gemini</span>
 <span class="t-line"><span class="t-key">deploy</span> Cloudflare</span>
 <span class="t-line"><span class="t-key">slots </span> <span class="t-ok">● accepting projects</span><span class="t-cursor" aria-hidden="true"></span></span></pre>
             </div>
@@ -397,9 +398,9 @@
           </ul>
           <a class="mail-link" href="mailto:contato@rutorin.com"><svg aria-hidden="true"><use href="#mail"></use></svg>contato@rutorin.com</a>
         </div>
-        <!-- Formulário: cole o endereço do Formspree em data-endpoint (ex.: https://formspree.io/f/xxxxabcd).
-             Sem endereço, o envio abre o app de e-mail do visitante com a mensagem pronta. -->
-        <form class="contact-form reveal" data-endpoint="" data-email="contato@rutorin.com" novalidate>
+        <!-- Formulário: envia para /api/contato (função do Cloudflare Pages), que repassa ao Worker rutorin-contato. Veja LEIA-ME.md. -->
+        <form class="contact-form reveal" data-endpoint="/api/contato" data-email="contato@rutorin.com" novalidate>
+          <div class="hp-field" aria-hidden="true"><label>Site <input type="text" name="site" tabindex="-1" autocomplete="off"></label></div>
           <label>Your name
             <input type="text" name="nome" autocomplete="name" required>
           </label>

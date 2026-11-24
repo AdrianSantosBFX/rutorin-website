@@ -1,0 +1,22 @@
+{
+  // Worker que envia as mensagens do formulário de rutorin.com para o seu e-mail.
+  // O endereço de destino NÃO fica aqui: ele é guardado como segredo (DESTINO).
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "rutorin-contato",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-01",
+
+  // Sem endereço público: só o site chama este Worker (service binding no Pages).
+  "workers_dev": false,
+  "preview_urls": false,
+
+  // Envio de e-mail pela Cloudflare. Só consegue enviar para endereços
+  // verificados no Email Routing (o seu Yahoo já é um deles).
+  "send_email": [{ "name": "EMAIL" }],
+
+  "vars": {
+    "REMETENTE": "site@rutorin.com"
+  },
+
+  "observability": { "enabled": true }
+}

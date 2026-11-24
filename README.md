@@ -10,6 +10,7 @@ Inclui home de vendas em português e inglês, blog (devlog) e as políticas de 
 - HTML, CSS e JavaScript puros, sem frameworks e sem etapa de build
 - Animações com a Web Animations API, nativa do navegador
 - Hospedagem na Cloudflare Pages
+- Formulário com Pages Functions + Cloudflare Workers (envio de e-mail nativo)
 
 ## Estrutura
 
@@ -22,6 +23,9 @@ tratamento-de-dados/     Política de Tratamento de Dados  (en/data-processing/)
 styles.css               Visual do site inteiro
 script.js                Animações, idioma, menu, formulário e filtros do blog
 assets/                  Imagens, fonte Fredoka e cursores
+functions/api/contato.js Recebe o formulário (Cloudflare Pages Function)
+worker-contato/          Worker que envia as mensagens por e-mail
+_redirects               Esconde arquivos internos do site publicado
 sitemap.xml, robots.txt  SEO
 ```
 

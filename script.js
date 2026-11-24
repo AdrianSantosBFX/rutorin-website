@@ -312,6 +312,7 @@
   const form = document.querySelector('.contact-form');
   if (form) {
     const status = form.querySelector('.form-status');
+    const formStartedAt = Date.now();
     const setStatus = (text, type) => {
       status.textContent = text;
       status.classList.toggle('is-error', type === 'error');
@@ -333,6 +334,9 @@
       }
 
       const data = new FormData(form);
+      data.set('_t', String(formStartedAt));
+      data.set('idioma', isPt ? 'pt' : 'en');
+      data.set('pagina', location.pathname);
       const endpoint = form.dataset.endpoint;
 
       if (!endpoint) {

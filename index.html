@@ -299,16 +299,16 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="hud-chip">Fase 5 · Save files</span>
-          <h2 id="proj-title">Projetos que eu fiz do zero.</h2>
-          <p>Código, design e texto feitos por mim. É o mesmo cuidado que o seu projeto vai receber.</p>
+          <h2 id="proj-title">Veja o que eu faço.</h2>
+          <p>Projetos de demonstração e o próprio site da Rutorin. Os cases de clientes entram aqui conforme forem sendo entregues.</p>
         </div>
         <div class="projects">
           <article class="card project project-main reveal">
-            <img src="assets/skyward-legends.webp" alt="Cena de Skyward Legends: ilhas flutuantes num céu azul" width="960" height="540" loading="lazy">
+            <img src="assets/demo-pixel-pato.svg" alt="Mockup de landing page para o jogo fictício Pixel Pato, com a faixa Exemplo fictício" width="960" height="540" loading="lazy">
             <div class="project-body">
-              <span class="project-tag">Jogo · JavaScript</span>
-              <h3>Skyward Legends</h3>
-              <p>RPG de navegador com história, batalhas e escolhas, com o motor do jogo escrito do zero.</p>
+              <span class="project-tag project-tag-demo">Exemplo fictício</span><span class="project-tag">Landing page de jogo</span>
+              <h3>Pixel Pato <small>(jogo inventado)</small></h3>
+              <p>Uma landing page de demonstração para um jogo indie que não existe: título, chamada para a lista de desejos e press kit. É o tipo de página que o Kit de Lançamento Indie entrega.</p>
             </div>
           </article>
           <div class="project-side">
@@ -319,12 +319,13 @@
                 <p>Este site: ilustração, design no Figma, código e textos. Rápido e publicado na Cloudflare.</p>
               </div>
             </article>
-            <div class="terminal reveal" role="img" aria-label="Status: stack HTML, CSS, JavaScript, Astro e Node; bots para Discord e Twitch; design no Figma; publicação na Cloudflare; agenda com vagas abertas.">
+            <div class="terminal reveal" role="img" aria-label="Status: stack HTML, CSS, JavaScript, Astro e Node; bots para Discord e Twitch; design no Figma; inteligência artificial com Claude Code e Gemini; publicação na Cloudflare; agenda com vagas abertas.">
               <div class="terminal-bar"><i></i><i></i><i></i><span>rutorin://status</span></div>
               <pre><span class="t-line"><span class="t-dim">$</span> rutorin status --all</span>
 <span class="t-line"><span class="t-key">stack </span> HTML · CSS · JS · Astro · Node</span>
 <span class="t-line"><span class="t-key">bots  </span> Discord · Twitch</span>
 <span class="t-line"><span class="t-key">design</span> Figma</span>
+<span class="t-line"><span class="t-key">ia    </span> Claude Code · Gemini</span>
 <span class="t-line"><span class="t-key">deploy</span> Cloudflare</span>
 <span class="t-line"><span class="t-key">agenda</span> <span class="t-ok">● vagas abertas</span><span class="t-cursor" aria-hidden="true"></span></span></pre>
             </div>
@@ -412,9 +413,9 @@
           </ul>
           <a class="mail-link" href="mailto:contato@rutorin.com"><svg aria-hidden="true"><use href="#mail"></use></svg>contato@rutorin.com</a>
         </div>
-        <!-- Formulário: cole o endereço do Formspree em data-endpoint (ex.: https://formspree.io/f/xxxxabcd).
-             Sem endereço, o envio abre o app de e-mail do visitante com a mensagem pronta. -->
-        <form class="contact-form reveal" data-endpoint="" data-email="contato@rutorin.com" novalidate>
+        <!-- Formulário: envia para /api/contato (função do Cloudflare Pages), que repassa ao Worker rutorin-contato. Veja LEIA-ME.md. -->
+        <form class="contact-form reveal" data-endpoint="/api/contato" data-email="contato@rutorin.com" novalidate>
+          <div class="hp-field" aria-hidden="true"><label>Site <input type="text" name="site" tabindex="-1" autocomplete="off"></label></div>
           <label>Seu nome
             <input type="text" name="nome" autocomplete="name" required>
           </label>
