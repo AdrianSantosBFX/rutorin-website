@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Devlog da Rutorin</title>
+    <link>https://rutorin.com/blog/</link>
+    <atom:link href="https://rutorin.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Devlogs, tutoriais e bastidores da construção de games, game engines e projetos web.</description>
+    <language>pt-BR</language>
+    <item>
+      <title>Começando a saga: por que vou documentar tudo</title>
+      <link>https://rutorin.com/blog/comecando-a-saga/</link>
+      <guid>https://rutorin.com/blog/comecando-a-saga/</guid>
+      <pubDate>Tue, 24 Nov 2026 12:00:00 -0300</pubDate>
+      <category>Devlog</category>
+      <description>O primeiro devlog: o que vem por aí na construção da minha game engine e nos bastidores da Rutorin.</description>
+    </item>
+  </channel>
+</rss>

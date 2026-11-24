@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://rutorin.com/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://rutorin.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rutorin.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rutorin.com/en/"/>
+  </url>
+  <url>
+    <loc>https://rutorin.com/en/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://rutorin.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rutorin.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rutorin.com/en/"/>
+  </url>
+  <url>
+    <loc>https://rutorin.com/blog/</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://rutorin.com/blog/comecando-a-saga/</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://rutorin.com/privacidade/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://rutorin.com/privacidade/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rutorin.com/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rutorin.com/en/privacy/"/>
+  </url>
+  <url>
+    <loc>https://rutorin.com/en/privacy/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://rutorin.com/privacidade/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rutorin.com/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rutorin.com/en/privacy/"/>
+  </url>
+  <url>
+    <loc>https://rutorin.com/tratamento-de-dados/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://rutorin.com/tratamento-de-dados/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rutorin.com/en/data-processing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rutorin.com/en/data-processing/"/>
+  </url>
+  <url>
+    <loc>https://rutorin.com/en/data-processing/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://rutorin.com/tratamento-de-dados/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rutorin.com/en/data-processing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rutorin.com/en/data-processing/"/>
+  </url>
+</urlset>

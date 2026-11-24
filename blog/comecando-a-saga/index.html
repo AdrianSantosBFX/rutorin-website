@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b206e">
+  <title>Começando a saga: por que vou documentar tudo · Blog Rutorin</title>
+  <meta name="description" content="O primeiro devlog: o que vem por aí na construção da minha game engine e nos bastidores da Rutorin.">
+  <link rel="canonical" href="https://rutorin.com/blog/comecando-a-saga/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Rutorin">
+  <meta property="og:url" content="https://rutorin.com/blog/comecando-a-saga/">
+  <meta property="og:title" content="Começando a saga: por que vou documentar tudo · Blog Rutorin">
+  <meta property="og:description" content="O primeiro devlog: o que vem por aí na construção da minha game engine e nos bastidores da Rutorin.">
+  <meta property="og:image" content="https://rutorin.com/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/rss+xml" title="Devlog da Rutorin" href="https://rutorin.com/blog/feed.xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
+  <link rel="preload" href="../../assets/fredoka-600.ttf" as="font" type="font/ttf" crossorigin>
+  <!-- Google Analytics (GA4): troque G-XXXXXXXXXX pelo seu ID e apague as linhas de comentário em volta.
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  -->
+  <link rel="stylesheet" href="../../styles.css">
+  <meta property="article:published_time" content="2026-11-24">
+  <meta property="article:section" content="Devlog">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Começando a saga: por que vou documentar tudo", "description": "O primeiro devlog: o que vem por aí na construção da minha game engine e nos bastidores da Rutorin.", "url": "https://rutorin.com/blog/comecando-a-saga/", "mainEntityOfPage": "https://rutorin.com/blog/comecando-a-saga/", "inLanguage": "pt-BR", "datePublished": "2026-11-24", "dateModified": "2026-11-24", "image": "https://rutorin.com/assets/og-image.jpg", "articleSection": "Devlog", "author": {"@type": "Person", "name": "Rutorin", "url": "https://rutorin.com/"}, "publisher": {"@type": "Organization", "name": "Rutorin", "url": "https://rutorin.com/", "logo": {"@type": "ImageObject", "url": "https://rutorin.com/assets/rutorin-logo.png"}}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://rutorin.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://rutorin.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Começando a saga: por que vou documentar tudo", "item": "https://rutorin.com/blog/comecando-a-saga/"}]}</script>
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="../../script.js" defer></script>
+</head>
+<body class="page-blog">
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="sparkles" viewBox="0 0 24 24"><path d="m10 3 2.5 6.5L19 12l-6.5 2.5L10 21l-2.5-6.5L1 12l6.5-2.5L10 3Zm10-2 1.1 2.9L24 5l-2.9 1.1L20 9l-1.1-2.9L16 5l2.9-1.1L20 1Z" fill="currentColor"/></symbol>
+    <symbol id="play" viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5Z" fill="currentColor"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="arrow-left" viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 10h16M9 3v4M15 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="rss" viewBox="0 0 24 24"><path d="M5 5a14 14 0 0 1 14 14M5 11a8 8 0 0 1 8 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="6" cy="18" r="1.8" fill="currentColor"/></symbol>
+  </svg>
+
+  <header class="site-header is-solid">
+    <div class="header-inner">
+      <a class="brand" href="../../" aria-label="Rutorin, página inicial" draggable="false"><img src="../../assets/rutorin-logo.webp" alt="Rutorin" width="600" height="152" draggable="false"></a>
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a class="nav-link" href="../../#classes">Para quem</a>
+        <a class="nav-link" href="../../#power-ups">Pacotes</a>
+        <a class="nav-link" href="../../#projetos">Projetos</a>
+        <a class="nav-link is-current" href="../../blog/" aria-current="page">Blog</a>
+        <a class="nav-link" href="../../#duvidas">Dúvidas</a>
+        <a class="nav-link" href="https://ko-fi.com/rutorin/shop" target="_blank" rel="noopener noreferrer">Shop<span class="visually-hidden"> (abre em nova aba)</span></a>
+        <a class="lang-switch" href="../../en/" hreflang="en" lang="en" data-lang-switch="en" aria-label="English version"><svg aria-hidden="true"><use href="#globe"></use></svg>EN</a>
+      </nav>
+      <a class="commission-button" href="../../#contato"><svg class="commission-icon" aria-hidden="true"><use href="#sparkles"></use></svg><span>Começar projeto</span><span class="commission-sheen" aria-hidden="true"></span></a>
+      <button class="menu-button" popovertarget="mobile-menu" aria-label="Abrir menu"><svg><use href="#menu"></use></svg></button>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobile-menu" popover aria-label="Menu">
+    <div class="mobile-menu-heading"><span>Explore a Rutorin</span><button class="close-button" popovertarget="mobile-menu" popovertargetaction="hide" aria-label="Fechar menu"><svg><use href="#close"></use></svg></button></div>
+    <a href="../../#classes">Para quem</a>
+    <a href="../../#power-ups">Pacotes</a>
+    <a href="../../#projetos">Projetos</a>
+    <a href="../../blog/">Blog</a>
+    <a href="../../#duvidas">Dúvidas</a>
+    <a href="https://ko-fi.com/rutorin/shop" target="_blank" rel="noopener noreferrer">Shop</a>
+    <a href="../../en/" hreflang="en" lang="en" data-lang-switch="en" class="mobile-lang"><svg aria-hidden="true"><use href="#globe"></use></svg>English version</a>
+    <a href="../../#contato" class="mobile-cta">Começar meu projeto</a>
+  </nav>
+
+  <main>
+    <article class="post" aria-labelledby="post-title">
+      <header class="blog-hero post-hero">
+        <div class="container blog-hero-inner">
+          <nav class="breadcrumb" aria-label="Você está em"><a href="../../">Início</a><span aria-hidden="true">›</span><a href="../../blog/">Blog</a><span aria-hidden="true">›</span><span>Devlog</span></nav>
+          <span class="hud-chip hud-chip-light">Devlog #01</span>
+          <h1 id="post-title">Começando a saga: por que vou documentar tudo</h1>
+          <p>O primeiro devlog: o que vem por aí na construção da minha game engine e nos bastidores da Rutorin.</p>
+          <div class="post-hero-meta">
+            <span><svg aria-hidden="true"><use href="#calendar"></use></svg><time datetime="2026-11-24">24 de novembro de 2026</time></span>
+            <span><svg aria-hidden="true"><use href="#clock"></use></svg>3 min de leitura</span>
+            <span>por Rutorin</span>
+          </div>
+        </div>
+        <img class="blog-hero-cloud" src="../../assets/cloud-divider.webp" alt="" width="2172" height="724" aria-hidden="true">
+      </header>
+
+      <div class="container post-layout">
+        <div class="prose">
+          <p class="post-note">Este é um post de exemplo, para mostrar como o blog funciona. Edite ou apague à vontade.</p>
+
+          <p>Todo projeto grande começa com uma decisão pequena. A minha foi esta: <strong>documentar a jornada em público</strong>. Cada passo da construção da minha game engine, cada site e cada bot vão ganhar um registro aqui.</p>
+
+          <h2>Por que escrever um devlog?</h2>
+          <p>Escrever obriga a entender. Quando eu explico um conceito com as minhas palavras, descubro na hora o que eu ainda não sei. E, de quebra, quem está começando o mesmo caminho encontra um mapa um pouco mais completo.</p>
+
+          <blockquote>Se você não consegue explicar de forma simples, ainda não entendeu bem o suficiente.</blockquote>
+
+          <h2>O que você vai encontrar aqui</h2>
+          <ul>
+            <li><strong>Devlogs</strong> da game engine que estou construindo para estudo: o que funcionou, o que quebrou e por quê.</li>
+            <li><strong>Tutoriais</strong> de desenvolvimento web, bots e games, escritos do jeito que eu queria ter lido.</li>
+            <li><strong>Bastidores</strong> dos projetos da Rutorin.</li>
+          </ul>
+
+          <h2>Um gostinho do que vem</h2>
+          <p>Boa parte de uma engine 3D é matemática. Um exemplo simples é o produto escalar entre dois vetores:</p>
+<pre><code><span class="c-key">struct</span> <span class="c-type">Vec3</span> { <span class="c-key">float</span> x, y, z; };
+
+<span class="c-key">float</span> <span class="c-fn">dot</span>(<span class="c-key">const</span> <span class="c-type">Vec3</span>&amp; a, <span class="c-key">const</span> <span class="c-type">Vec3</span>&amp; b) {
+    <span class="c-key">return</span> a.x * b.x + a.y * b.y + a.z * b.z;
+}</code></pre>
+          <p>Parece pouco, mas é com ele que se calcula iluminação, ângulo de visão e muito mais. Nos próximos devlogs a gente desmonta isso com calma.</p>
+
+          <h2>Próxima fase</h2>
+          <p>No próximo post, começo pela base: abrir uma janela, desenhar o primeiro triângulo e entender o que acontece entre o código e a tela. Até lá!</p>
+        </div>
+
+        <div class="post-share" aria-label="Compartilhar">
+          <span>Compartilhar:</span>
+          <a href="https://twitter.com/intent/tweet?url=https://rutorin.com/blog/comecando-a-saga/&amp;text=Começando%20a%20saga:%20por%20que%20vou%20documentar%20tudo" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+          <a href="https://wa.me/?text=https://rutorin.com/blog/comecando-a-saga/" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <button type="button" class="copy-link" data-url="https://rutorin.com/blog/comecando-a-saga/"><svg aria-hidden="true"><use href="#link"></use></svg><span>Copiar link</span></button>
+        </div>
+
+      <aside class="post-cta" aria-labelledby="cta-title">
+        <span class="hud-chip hud-chip-light">Player 2, pronto?</span>
+        <h2 id="cta-title">Precisa de um site ou bot para a sua comunidade?</h2>
+        <p>Eu crio sites, bots para Discord e Twitch e design sob medida para streamers, devs indie e criadores. Orçamento grátis em até 24h.</p>
+        <a class="button button-cta" href="../../#contato"><svg aria-hidden="true"><use href="#play"></use></svg><span>Começar meu projeto</span></a>
+      </aside>
+
+        <a class="back-link" href="../../blog/"><svg aria-hidden="true"><use href="#arrow-left"></use></svg>Voltar para o blog</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="../../assets/rutorin-logo.webp" alt="Rutorin" width="600" height="152" loading="lazy">
+        <p>Sites, bots e design para quem vive da internet.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Rodapé">
+        <a href="../../#classes">Para quem</a>
+        <a href="../../#power-ups">Pacotes</a>
+        <a href="../../#projetos">Projetos</a>
+        <a href="../../blog/">Blog</a>
+        <a href="../../#duvidas">Dúvidas</a>
+        <a href="https://ko-fi.com/rutorin/shop" target="_blank" rel="noopener noreferrer">Shop</a>
+        <a href="../../#contato">Contato</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span data-year>2026</span> Rutorin · Feito à mão em Varginha, MG</span>
+      <nav class="footer-legal" aria-label="Documentos legais"><a href="../../privacidade/">Política de Privacidade</a><a href="../../tratamento-de-dados/">Tratamento de Dados</a></nav>
+      <a href="mailto:contato@rutorin.com">contato@rutorin.com</a>
+    </div>
+  </footer>
+</body>
+</html>

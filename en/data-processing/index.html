@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b206e">
+  <title>Data Processing Policy · Rutorin</title>
+  <meta name="description" content="How Rutorin processes, as a processor, the personal data in clients' projects, and which security measures it applies.">
+  <link rel="canonical" href="https://rutorin.com/en/data-processing/">
+  <link rel="alternate" hreflang="pt" href="https://rutorin.com/tratamento-de-dados/">
+  <link rel="alternate" hreflang="en" href="https://rutorin.com/en/data-processing/">
+  <link rel="alternate" hreflang="x-default" href="https://rutorin.com/en/data-processing/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Rutorin">
+  <meta property="og:url" content="https://rutorin.com/en/data-processing/">
+  <meta property="og:title" content="Data Processing Policy · Rutorin">
+  <meta property="og:description" content="How Rutorin processes, as a processor, the personal data in clients' projects, and which security measures it applies.">
+  <meta property="og:image" content="https://rutorin.com/assets/og-image.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
+  <link rel="preload" href="../../assets/fredoka-600.ttf" as="font" type="font/ttf" crossorigin>
+  <!-- Google Analytics (GA4): troque G-XXXXXXXXXX pelo seu ID e apague as linhas de comentário em volta.
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  -->
+  <link rel="stylesheet" href="../../styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="../../script.js" defer></script>
+</head>
+<body class="page-blog page-legal">
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="sparkles" viewBox="0 0 24 24"><path d="m10 3 2.5 6.5L19 12l-6.5 2.5L10 21l-2.5-6.5L1 12l6.5-2.5L10 3Zm10-2 1.1 2.9L24 5l-2.9 1.1L20 9l-1.1-2.9L16 5l2.9-1.1L20 1Z" fill="currentColor"/></symbol>
+    <symbol id="play" viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5Z" fill="currentColor"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="arrow-left" viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 10h16M9 3v4M15 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="rss" viewBox="0 0 24 24"><path d="M5 5a14 14 0 0 1 14 14M5 11a8 8 0 0 1 8 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="6" cy="18" r="1.8" fill="currentColor"/></symbol>
+  </svg>
+
+  <header class="site-header is-solid">
+    <div class="header-inner">
+      <a class="brand" href="../../en/" aria-label="Rutorin, home page" draggable="false"><img src="../../assets/rutorin-logo.webp" alt="Rutorin" width="600" height="152" draggable="false"></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a class="nav-link" href="../../en/#classes">Who it's for</a>
+        <a class="nav-link" href="../../en/#power-ups">Pricing</a>
+        <a class="nav-link" href="../../en/#projetos">Projects</a>
+        <a class="nav-link" href="../../blog/">Blog</a>
+        <a class="nav-link" href="../../en/#duvidas">FAQ</a>
+        <a class="nav-link" href="https://ko-fi.com/rutorin/shop" target="_blank" rel="noopener noreferrer">Shop<span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a class="lang-switch" href="../../tratamento-de-dados/" hreflang="pt" lang="pt-BR" data-lang-switch="pt" aria-label="Versão em português"><svg aria-hidden="true"><use href="#globe"></use></svg>PT</a>
+      </nav>
+      <a class="commission-button" href="../../en/#contato"><svg class="commission-icon" aria-hidden="true"><use href="#sparkles"></use></svg><span>Start a project</span><span class="commission-sheen" aria-hidden="true"></span></a>
+      <button class="menu-button" popovertarget="mobile-menu" aria-label="Open menu"><svg><use href="#menu"></use></svg></button>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobile-menu" popover aria-label="Menu">
+    <div class="mobile-menu-heading"><span>Explore Rutorin</span><button class="close-button" popovertarget="mobile-menu" popovertargetaction="hide" aria-label="Close menu"><svg><use href="#close"></use></svg></button></div>
+    <a href="../../en/#classes">Who it's for</a>
+    <a href="../../en/#power-ups">Pricing</a>
+    <a href="../../en/#projetos">Projects</a>
+    <a href="../../blog/">Blog</a>
+    <a href="../../en/#duvidas">FAQ</a>
+    <a href="https://ko-fi.com/rutorin/shop" target="_blank" rel="noopener noreferrer">Shop</a>
+    <a href="../../tratamento-de-dados/" hreflang="pt" lang="pt-BR" data-lang-switch="pt" class="mobile-lang"><svg aria-hidden="true"><use href="#globe"></use></svg>Versão em português</a>
+    <a href="../../en/#contato" class="mobile-cta">Start my project</a>
+  </nav>
+
+  <main>
+    <header class="blog-hero post-hero legal-hero">
+      <div class="container blog-hero-inner">
+        <nav class="breadcrumb" aria-label="You are here"><a href="../../en/">Home</a><span aria-hidden="true">›</span><span>Data Processing Policy</span></nav>
+        <span class="hud-chip hud-chip-light">Legal document</span>
+        <h1>Data Processing Policy</h1>
+        <p>How Rutorin looks after the personal data that passes through clients' projects: websites, bots and automations. It also serves as our information security policy.</p>
+        <div class="post-hero-meta"><span><svg aria-hidden="true"><use href="#calendar"></use></svg>Last updated: November 24, 2026</span></div>
+      </div>
+      <img class="blog-hero-cloud" src="../../assets/cloud-divider.webp" alt="" width="2172" height="724" aria-hidden="true">
+    </header>
+
+    <div class="container legal-layout">
+      <nav class="legal-toc" aria-labelledby="toc-title">
+        <p id="toc-title">On this page</p>
+        <ol>
+          <li><a href="#roles">What this policy is for</a></li>
+          <li><a href="#data">What data may pass through projects</a></li>
+          <li><a href="#commitments">Rutorin's commitments as a processor</a></li>
+          <li><a href="#security">Security measures</a></li>
+          <li><a href="#subprocessors">Providers (subprocessors)</a></li>
+          <li><a href="#incidents">Security incidents</a></li>
+          <li><a href="#end">End of the project</a></li>
+          <li><a href="#client">Client's responsibilities</a></li>
+          <li><a href="#contact">Questions and updates</a></li>
+        </ol>
+      </nav>
+      <div class="prose legal-prose">
+        <section class="legal-section" id="roles" aria-labelledby="roles-t">
+          <h2 id="roles-t"><span class="legal-num">01</span>What this policy is for</h2>
+<p>When Rutorin builds a website, bot or automation, it may come into contact with personal data of the people who use the project: your Discord members, followers or site visitors. In these cases <strong>you, the client, are the controller</strong> (you decide what the data is for) and <strong>Rutorin is the processor</strong> (it processes the data following your instructions), under articles 5 and 39 of Brazil's LGPD and, where applicable, article 28 of the GDPR.</p>
+<p>This policy explains how Rutorin looks after that data. It is part of every proposal and contract and also serves as our information security policy. Data that Rutorin processes as a controller (such as that of site visitors and clients) is covered by the <a href="../../en/privacy/">Privacy Policy</a>.</p>
+        </section>
+        <section class="legal-section" id="data" aria-labelledby="data-t">
+          <h2 id="data-t"><span class="legal-num">02</span>What data may pass through projects</h2>
+<ul>
+<li><strong>Discord and Twitch bots:</strong> user IDs and names, roles, commands sent to the bot and moderation logs.</li>
+<li><strong>Websites and landing pages:</strong> what visitors submit through your forms (contact, newsletter, waitlist) and audience metrics.</li>
+<li><strong>Access to your accounts:</strong> hosting, domain, Discord or Twitch dashboards, when needed for the work.</li>
+<li><strong>Materials you send:</strong> copy, images and lists that may contain third-party data.</li>
+</ul>
+<p>The rule is <strong>data minimization</strong>: each project collects only what its features need. A bot, for example, does not store the content of server messages unless a feature agreed with you requires it (such as a moderation log), always with a defined retention period.</p>
+        </section>
+        <section class="legal-section" id="commitments" aria-labelledby="commitments-t">
+          <h2 id="commitments-t"><span class="legal-num">03</span>Rutorin's commitments as a processor</h2>
+<ol>
+<li><strong>Follow your instructions.</strong> Data is processed only as agreed in writing in the proposal, contract or messages. If an instruction seems to conflict with the law, Rutorin will tell you before acting on it.</li>
+<li><strong>Confidentiality.</strong> Project data is confidential and is never used for any other purpose, sold or shared.</li>
+<li><strong>Support with data subject requests.</strong> If someone asks Rutorin to access, correct or delete data from your project, the request is forwarded to you within 5 business days, and Rutorin helps with the technical side.</li>
+<li><strong>Transparency.</strong> Rutorin provides the information you need to show compliance and can help draft the privacy notice for your site or bot.</li>
+</ol>
+        </section>
+        <section class="legal-section" id="security" aria-labelledby="security-t">
+          <h2 id="security-t"><span class="legal-num">04</span>Security measures</h2>
+<ul>
+<li><strong>Protected accounts:</strong> two-step verification on all work accounts and unique passwords kept in a password manager.</li>
+<li><strong>Least access:</strong> whenever the platform allows, Rutorin asks for an invite or delegated permission (for example as a collaborator or server admin) instead of your password, and only with the permissions needed.</li>
+<li><strong>Keys and tokens:</strong> bot and API credentials are kept in environment variables or secret vaults, never in code or public repositories.</li>
+<li><strong>Encryption:</strong> communication over encrypted connections (HTTPS/TLS) and a work computer with password, disk encryption and up-to-date software.</li>
+<li><strong>Test data:</strong> development and testing use sample data whenever possible.</li>
+<li><strong>Maintenance:</strong> project dependencies and libraries are kept up to date during the contract.</li>
+</ul>
+        </section>
+        <section class="legal-section" id="subprocessors" aria-labelledby="subprocessors-t">
+          <h2 id="subprocessors-t"><span class="legal-num">05</span>Providers (subprocessors)</h2>
+<p>Some projects rely on third-party services such as Cloudflare (hosting), GitHub (code), Figma (design) and server providers for bots <mark class="todo">[e.g. the provider you use to host bots]</mark>. The providers for each project are listed in the proposal, and you can reject any of them before work starts. Rutorin remains responsible for the work it delegates to them.</p>
+<p>When a provider is outside Brazil, the transfer follows article 33 of the LGPD and ANPD Resolution No. 19/2024.</p>
+        </section>
+        <section class="legal-section" id="incidents" aria-labelledby="incidents-t">
+          <h2 id="incidents-t"><span class="legal-num">06</span>Security incidents</h2>
+<p>If Rutorin becomes aware of an incident involving your project's data (such as a leak or unauthorized access), it will notify you <strong>within 48 hours</strong> with what is known so far: what happened, which data was affected and what has been done to contain it.</p>
+<p>As the controller, you decide on notifying the authority and the people affected. Under Brazilian rules this must happen within three business days (ANPD Resolution No. 15/2024, doubled for small-scale agents); under the GDPR, within 72 hours. Rutorin helps gather the technical information.</p>
+        </section>
+        <section class="legal-section" id="end" aria-labelledby="end-t">
+          <h2 id="end-t"><span class="legal-num">07</span>End of the project</h2>
+<ul>
+<li>All project files, code and data are handed over to you.</li>
+<li>Access to your accounts is returned, and we recommend you change passwords and remove Rutorin's permissions.</li>
+<li>Copies of the project's personal data kept by Rutorin are deleted within 30 days, except what the law requires us to keep.</li>
+</ul>
+        </section>
+        <section class="legal-section" id="client" aria-labelledby="client-t">
+          <h2 id="client-t"><span class="legal-num">08</span>Client's responsibilities</h2>
+<p>As the controller, you are responsible for having a legal basis for the data the project will process, keeping a privacy notice for your audience (Rutorin can help write it) and giving instructions that comply with the law.</p>
+        </section>
+        <section class="legal-section" id="contact" aria-labelledby="contact-t">
+          <h2 id="contact-t"><span class="legal-num">09</span>Questions and updates</h2>
+<p>Questions about this policy or a specific project: <a href="mailto:contato@rutorin.com">contato@rutorin.com</a>. This policy may be updated; the date of the latest version is shown at the top of the page, and relevant changes are communicated to clients with an active contract.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="../../assets/rutorin-logo.webp" alt="Rutorin" width="600" height="152" loading="lazy">
+        <p>Websites, bots and design for people who live online.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="../../en/#classes">Who it's for</a>
+        <a href="../../en/#power-ups">Pricing</a>
+        <a href="../../en/#projetos">Projects</a>
+        <a href="../../blog/">Blog</a>
+        <a href="../../en/#duvidas">FAQ</a>
+        <a href="https://ko-fi.com/rutorin/shop" target="_blank" rel="noopener noreferrer">Shop</a>
+        <a href="../../en/#contato">Contact</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span data-year>2026</span> Rutorin · Handmade in Brazil</span>
+      <nav class="footer-legal" aria-label="Legal documents"><a href="../../en/privacy/">Privacy Policy</a><a href="../../en/data-processing/">Data Processing</a></nav>
+      <a href="mailto:contato@rutorin.com">contato@rutorin.com</a>
+    </div>
+  </footer>
+</body>
+</html>

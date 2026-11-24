@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1035b5">
+  <title>Rutorin · Sites e bots para streamers, devs indie e criadores</title>
+  <meta name="description" content="Sites, bots para Discord e Twitch e design sob medida para streamers, devs indie e criadores. Você aprova o layout antes de qualquer linha de código. Orçamento grátis em até 24h.">
+  <link rel="canonical" href="https://rutorin.com/">
+  <link rel="alternate" hreflang="pt" href="https://rutorin.com/">
+  <link rel="alternate" hreflang="en" href="https://rutorin.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://rutorin.com/en/">
+  <script>
+    /* Idioma: quem não tem português no navegador vai para a versão em inglês.
+       Uma escolha manual (seletor PT/EN) sempre vence. Robôs de busca não são redirecionados. */
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('rutorin-lang'); } catch (e) {}
+      if (saved === 'pt') return;
+      if (saved !== 'en') {
+        if (/bot|crawl|spider|slurp|lighthouse|preview|facebookexternalhit/i.test(navigator.userAgent)) return;
+        var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+        for (var i = 0; i < langs.length; i++) { if (/^pt(-|$)/i.test(langs[i])) return; }
+      }
+      location.replace('en/' + location.search + location.hash);
+    })();
+  </script>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:url" content="https://rutorin.com/">
+  <meta property="og:title" content="Rutorin · Sua comunidade merece mais que um link na bio">
+  <meta property="og:description" content="Sites, bots e design sob medida para streamers, devs indie e criadores.">
+  <meta property="og:image" content="https://rutorin.com/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fredoka-600.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/gamer-room.webp" as="image">
+  <!-- Google Analytics (GA4): troque G-XXXXXXXXXX pelo seu ID e apague as linhas de comentário em volta.
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  -->
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="gamepad" viewBox="0 0 32 32"><path d="M10 8h12c4 0 5.3 4.6 6.5 9.4 1.2 4.9.6 7.4-1.7 7.4-2 0-4.5-3.8-6.4-3.8h-8.8c-1.9 0-4.4 3.8-6.4 3.8-2.3 0-2.9-2.5-1.7-7.4C4.7 12.6 6 8 10 8Z" fill="currentColor"/><path d="M10.5 12v7m-3.5-3.5h7" fill="none" stroke="#2876ff" stroke-width="2.2" stroke-linecap="round"/><circle cx="22" cy="13" r="1.5" fill="#2876ff"/><circle cx="25" cy="17" r="1.5" fill="#2876ff"/></symbol>
+    <symbol id="layers" viewBox="0 0 32 32"><path d="m3 10 13-7 13 7-13 7L3 10Zm0 7 13 7 13-7M3 24l13 7 13-7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="sparkles" viewBox="0 0 24 24"><path d="m10 3 2.5 6.5L19 12l-6.5 2.5L10 21l-2.5-6.5L1 12l6.5-2.5L10 3Zm10-2 1.1 2.9L24 5l-2.9 1.1L20 9l-1.1-2.9L16 5l2.9-1.1L20 1Z" fill="currentColor"/></symbol>
+    <symbol id="play" viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5Z" fill="currentColor"/></symbol>
+    <symbol id="heart" viewBox="0 0 7 7"><path d="M1 0h2v1h1V0h2v1h1v3H6v1H5v1H4v1H3V6H2V5H1V4H0V1h1Z" fill="currentColor"/></symbol>
+    <symbol id="headphones" viewBox="0 0 32 32"><path d="M6 19v-3a10 10 0 0 1 20 0v3" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M7.5 9.5 5 3.5l6 3M24.5 9.5l2.5-6-6 3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><rect x="3.5" y="17" width="6.5" height="10" rx="3" fill="currentColor"/><rect x="22" y="17" width="6.5" height="10" rx="3" fill="currentColor"/></symbol>
+    <symbol id="news" viewBox="0 0 32 32"><path d="M5 6h17v20H8a3 3 0 0 1-3-3V6Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M22 11h5v12a3 3 0 0 1-3 3h-2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M9.5 11h8M9.5 16h8M9.5 21h5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="bot" viewBox="0 0 32 32"><rect x="5" y="10" width="22" height="16" rx="5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M16 5v5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="4" r="2" fill="currentColor"/><circle cx="11.5" cy="18" r="2" fill="currentColor"/><circle cx="20.5" cy="18" r="2" fill="currentColor"/><path d="M2 16v5M30 16v5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="shield" viewBox="0 0 32 32"><path d="M16 3 5 7v8c0 7 4.7 12.3 11 14 6.3-1.7 11-7 11-14V7L16 3Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="m11 16 3.5 3.5L21 13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="tag" viewBox="0 0 32 32"><path d="M4 5v10l13 13 11-11L15 4H5a1 1 0 0 0-1 1Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="10.5" cy="10.5" r="2.5" fill="currentColor"/></symbol>
+    <symbol id="refresh" viewBox="0 0 32 32"><path d="M26 12A10.5 10.5 0 0 0 7 9.5M6 20a10.5 10.5 0 0 0 19 2.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M6 4v6h6M26 28v-6h-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="Rutorin, voltar ao início" draggable="false"><img src="assets/rutorin-logo.webp" alt="Rutorin" width="600" height="152" draggable="false"></a>
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a class="nav-link" href="#classes">Para quem</a>
+        <a class="nav-link" href="#power-ups">Pacotes</a>
+        <a class="nav-link" href="#projetos">Projetos</a>
+        <a class="nav-link" href="blog/">Blog</a>
+        <a class="nav-link" href="#duvidas">Dúvidas</a>
+        <a class="nav-link" href="https://ko-fi.com/rutorin/shop" target="_blank" rel="noopener noreferrer">Shop<span class="visually-hidden"> (abre em nova aba)</span></a>
+        <a class="lang-switch" href="en/" hreflang="en" lang="en" data-lang-switch="en" aria-label="English version"><svg aria-hidden="true"><use href="#globe"></use></svg>EN</a>
+      </nav>
+      <a class="commission-button" href="#contato"><svg class="commission-icon" aria-hidden="true"><use href="#sparkles"></use></svg><span>Começar projeto</span><span class="commission-sheen" aria-hidden="true"></span></a>
+      <button class="menu-button" popovertarget="mobile-menu" aria-label="Abrir menu"><svg><use href="#menu"></use></svg></button>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobile-menu" popover aria-label="Menu">
+    <div class="mobile-menu-heading"><span>Explore a Rutorin</span><button class="close-button" popovertarget="mobile-menu" popovertargetaction="hide" aria-label="Fechar menu"><svg><use href="#close"></use></svg></button></div>
+    <a href="#classes">Para quem</a>
+    <a href="#power-ups">Pacotes</a>
+    <a href="#projetos">Projetos</a>
+    <a href="blog/">Blog</a>
+    <a href="#duvidas">Dúvidas</a>
+    <a href="https://ko-fi.com/rutorin/shop" target="_blank" rel="noopener noreferrer">Shop</a>
+    <a href="en/" hreflang="en" lang="en" data-lang-switch="en" class="mobile-lang"><svg aria-hidden="true"><use href="#globe"></use></svg>English version</a>
+    <a href="#contato" class="mobile-cta">Começar meu projeto</a>
+  </nav>
+
+  <main>
+    <!-- ============ HERO · TELA DE TÍTULO ============ -->
+    <section class="world" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="hero-eyebrow"><svg aria-hidden="true"><use href="#sparkles"></use></svg>Para streamers, devs indie e criadores</p>
+        <h1 id="hero-title"><span>Sua comunidade merece</span> <span>mais que um link na bio.</span></h1>
+        <p class="hero-sub">Sites, bots para Discord e Twitch e design sob medida, feitos para o seu público te encontrar e ficar. Você aprova o layout antes de qualquer linha de código.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contato"><svg aria-hidden="true"><use href="#play"></use></svg><span>Começar meu projeto</span></a>
+          <a class="button button-secondary" href="#projetos"><svg aria-hidden="true"><use href="#layers"></use></svg><span>Ver projetos</span></a>
+        </div>
+        <ul class="hero-proof" aria-label="Garantias">
+          <li><svg aria-hidden="true"><use href="#check"></use></svg>Orçamento grátis em até 24h</li>
+          <li><svg aria-hidden="true"><use href="#check"></use></svg>Sem compromisso</li>
+          <li><svg aria-hidden="true"><use href="#check"></use></svg>Poucas vagas por mês</li>
+        </ul>
+      </div>
+      <div class="ambient-sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <img class="cloud-divider" src="assets/cloud-divider.webp" alt="" width="2172" height="724" aria-hidden="true">
+    </section>
+
+    <!-- ============ FASE 1 · GAME OVER (custo da inércia) ============ -->
+    <section class="section section-white" id="game-over" aria-labelledby="go-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="hud-chip"><span class="lives" aria-hidden="true"><svg><use href="#heart"></use></svg><svg class="lost"><use href="#heart"></use></svg><svg class="lost"><use href="#heart"></use></svg></span>Fase 1 · Game over</span>
+          <h2 id="go-title">Deixar para depois também tem um preço.</h2>
+          <p>Enquanto você não tem um lugar seu na internet, cada mês custa algumas vidas:</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card pain reveal">
+            <span class="pain-num">−1 vida</span>
+            <h3>Seu público mora no terreno dos outros</h3>
+            <p>Uma mudança no algoritmo e o alcance que você levou meses para construir some da noite para o dia. Sem site, você não tem para onde levar a sua audiência.</p>
+          </article>
+          <article class="card pain reveal">
+            <span class="pain-num">−1 vida</span>
+            <h3>Parcerias passam reto</h3>
+            <p>Marcas, publishers e imprensa procuram um lugar profissional para entender quem você é. Um link na bio não fecha negócio.</p>
+          </article>
+          <article class="card pain reveal">
+            <span class="pain-num">−1 vida</span>
+            <h3>Você vira o bot da sua comunidade</h3>
+            <p>Avisar que a live começou, moderar o Discord, dar cargo para quem chegou. Tarefa repetitiva que rouba o tempo que você deveria gastar criando.</p>
+          </article>
+        </div>
+        <p class="continue-line reveal">A boa notícia: <strong>todas essas vidas dá para recuperar.</strong></p>
+      </div>
+    </section>
+
+    <!-- Faixa rolando -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Sites para criadores</span><i>✦</i><span>Landing pages de jogos</span><i>✦</i><span>Bots para Discord</span><i>✦</i><span>Bots para Twitch</span><i>✦</i><span>Press kits</span><i>✦</i><span>Design no Figma</span><i>✦</i><span>SEO</span><i>✦</i><span>Copywriting</span><i>✦</i>
+        <span>Sites para criadores</span><i>✦</i><span>Landing pages de jogos</span><i>✦</i><span>Bots para Discord</span><i>✦</i><span>Bots para Twitch</span><i>✦</i><span>Press kits</span><i>✦</i><span>Design no Figma</span><i>✦</i><span>SEO</span><i>✦</i><span>Copywriting</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ FASE 2 · ESCOLHA SUA CLASSE ============ -->
+    <section class="section section-soft" id="classes" aria-labelledby="classes-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="hud-chip">Fase 2 · Escolha sua classe</span>
+          <h2 id="classes-title">Feito para quem cria na internet.</h2>
+          <p>Cada tipo de criador tem uma missão diferente. Escolha a sua e veja o que faz sentido para você.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card class-card reveal">
+            <span class="player-tag">P1</span>
+            <div class="class-icon"><svg aria-hidden="true"><use href="#headphones"></use></svg></div>
+            <h3>Streamer e criador</h3>
+            <p class="class-quest">Missão: transformar audiência em comunidade e parcerias.</p>
+            <ul class="check-list">
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Site próprio com agenda de lives</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Mídia kit para marcas</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Bots que cuidam do chat e do Discord</li>
+            </ul>
+            <a class="select-button" href="#pacote-criador">Selecionar <svg aria-hidden="true"><use href="#arrow"></use></svg></a>
+          </article>
+          <article class="card class-card reveal">
+            <span class="player-tag">P2</span>
+            <div class="class-icon"><svg aria-hidden="true"><use href="#gamepad"></use></svg></div>
+            <h3>Dev indie</h3>
+            <p class="class-quest">Missão: chegar ao lançamento com wishlists e imprensa.</p>
+            <ul class="check-list">
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Landing page do jogo</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Press kit pronto para a imprensa</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Comunidade organizada no Discord</li>
+            </ul>
+            <a class="select-button" href="#pacote-indie">Selecionar <svg aria-hidden="true"><use href="#arrow"></use></svg></a>
+          </article>
+          <article class="card class-card reveal">
+            <span class="player-tag">P3</span>
+            <div class="class-icon"><svg aria-hidden="true"><use href="#news"></use></svg></div>
+            <h3>Portal de conteúdo</h3>
+            <p class="class-quest">Missão: crescer no Google e manter o leitor no site.</p>
+            <ul class="check-list">
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Site rápido e bem estruturado</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>SEO técnico e de conteúdo</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Textos que convertem leitores</li>
+            </ul>
+            <a class="select-button" href="#missao-personalizada">Selecionar <svg aria-hidden="true"><use href="#arrow"></use></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FASE 3 · POWER-UPS (pacotes e preços) ============ -->
+    <section class="section section-blue" id="power-ups" aria-labelledby="power-title">
+      <div class="container">
+        <div class="section-head section-head-center reveal">
+          <span class="hud-chip hud-chip-light">Fase 3 · Power-ups</span>
+          <h2 id="power-title">Escolha seu power-up.</h2>
+          <p>Preço claro desde o início. Sem letras miúdas, sem surpresa no meio do caminho.</p>
+        </div>
+        <!-- ATENÇÃO: os preços abaixo são SUGESTÕES. Ajuste antes de publicar. -->
+        <div class="grid grid-3 packages">
+          <article class="card package reveal" id="pacote-criador">
+            <span class="package-for">Streamers e criadores</span>
+            <h3>Página de Criador</h3>
+            <p class="price">a partir de <strong>R$ 490</strong></p>
+            <ul class="check-list">
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Site de uma página com a sua identidade</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Agenda de lives, redes e links</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Mídia kit para parcerias</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Domínio e publicação configurados</li>
+            </ul>
+            <a class="button button-outline" href="#contato">Quero este</a>
+          </article>
+          <article class="card package package-featured reveal" id="pacote-indie">
+            <span class="package-badge">Mais completo</span>
+            <span class="package-for">Devs indie</span>
+            <h3>Kit de Lançamento Indie</h3>
+            <p class="price">a partir de <strong>R$ 1.290</strong></p>
+            <ul class="check-list">
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Landing page com trailer e capturas</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Press kit para imprensa e criadores</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Chamadas para wishlist e newsletter</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>SEO e textos de lançamento</li>
+            </ul>
+            <a class="button button-primary" href="#contato">Quero este</a>
+          </article>
+          <article class="card package reveal" id="pacote-bot">
+            <span class="package-for">Discord e Twitch</span>
+            <h3>Bot Guardião</h3>
+            <p class="price">a partir de <strong>R$ 390</strong></p>
+            <ul class="check-list">
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Boas-vindas e cargos automáticos</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Aviso automático de live e vídeos</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Moderação e comandos personalizados</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Instalação no seu servidor</li>
+            </ul>
+            <a class="button button-outline" href="#contato">Quero este</a>
+          </article>
+        </div>
+        <div class="custom-quest reveal" id="missao-personalizada">
+          <div>
+            <h3>Missão personalizada</h3>
+            <p>Portal de conteúdo, SEO, redesign ou algo que não está na lista? Me conte o objetivo e eu monto a proposta.</p>
+          </div>
+          <a class="button button-secondary" href="#contato">Pedir proposta <svg aria-hidden="true"><use href="#arrow"></use></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FASE 4 · A QUEST (processo) ============ -->
+    <section class="section section-white" id="quest" aria-labelledby="quest-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="hud-chip">Fase 4 · A quest</span>
+          <h2 id="quest-title">Do primeiro papo ao site no ar, em 4 etapas.</h2>
+          <p>Você não precisa entender de código. Só precisa saber onde quer chegar.</p>
+        </div>
+        <ol class="quest-path">
+          <li class="reveal">
+            <span class="quest-node">01</span>
+            <h3>Conversa</h3>
+            <p>Você me conta sua ideia, seu público e seu objetivo. Sem compromisso.</p>
+          </li>
+          <li class="reveal">
+            <span class="quest-node">02</span>
+            <h3>Proposta</h3>
+            <p>Escopo, prazo e valor fechados por escrito, antes de você pagar qualquer coisa.</p>
+          </li>
+          <li class="reveal">
+            <span class="quest-node">03</span>
+            <h3>Design aprovado</h3>
+            <p>O layout é desenhado no Figma. Só começo a programar depois do seu ok.</p>
+          </li>
+          <li class="reveal">
+            <span class="quest-node quest-node-final">04</span>
+            <h3>Entrega</h3>
+            <p>Site no ar, bot rodando e você sabendo usar tudo. E eu por perto se precisar.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ FASE 5 · SAVE FILES (prova) ============ -->
+    <section class="section section-soft" id="projetos" aria-labelledby="proj-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="hud-chip">Fase 5 · Save files</span>
+          <h2 id="proj-title">Projetos que eu fiz do zero.</h2>
+          <p>Código, design e texto feitos por mim. É o mesmo cuidado que o seu projeto vai receber.</p>
+        </div>
+        <div class="projects">
+          <article class="card project project-main reveal">
+            <img src="assets/skyward-legends.webp" alt="Cena de Skyward Legends: ilhas flutuantes num céu azul" width="960" height="540" loading="lazy">
+            <div class="project-body">
+              <span class="project-tag">Jogo · JavaScript</span>
+              <h3>Skyward Legends</h3>
+              <p>RPG de navegador com história, batalhas e escolhas, com o motor do jogo escrito do zero.</p>
+            </div>
+          </article>
+          <div class="project-side">
+            <article class="card project reveal">
+              <div class="project-body">
+                <span class="project-tag">Site · Design + código</span>
+                <h3>rutorin.com</h3>
+                <p>Este site: ilustração, design no Figma, código e textos. Rápido e publicado na Cloudflare.</p>
+              </div>
+            </article>
+            <div class="terminal reveal" role="img" aria-label="Status: stack HTML, CSS, JavaScript, Astro e Node; bots para Discord e Twitch; design no Figma; publicação na Cloudflare; agenda com vagas abertas.">
+              <div class="terminal-bar"><i></i><i></i><i></i><span>rutorin://status</span></div>
+              <pre><span class="t-line"><span class="t-dim">$</span> rutorin status --all</span>
+<span class="t-line"><span class="t-key">stack </span> HTML · CSS · JS · Astro · Node</span>
+<span class="t-line"><span class="t-key">bots  </span> Discord · Twitch</span>
+<span class="t-line"><span class="t-key">design</span> Figma</span>
+<span class="t-line"><span class="t-key">deploy</span> Cloudflare</span>
+<span class="t-line"><span class="t-key">agenda</span> <span class="t-ok">● vagas abertas</span><span class="t-cursor" aria-hidden="true"></span></span></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FASE 6 · CONTINUE? (garantias) ============ -->
+    <section class="section section-soft" id="garantias" aria-labelledby="cont-title">
+      <div class="container">
+        <div class="section-head section-head-center reveal">
+          <span class="hud-chip">Fase 6 · Continue?</span>
+          <h2 id="cont-title">O risco fica comigo, não com você.</h2>
+        </div>
+        <div class="grid grid-3">
+          <article class="guarantee reveal">
+            <div class="guarantee-icon"><svg aria-hidden="true"><use href="#shield"></use></svg></div>
+            <h3>Você aprova antes</h3>
+            <p>Nada vai para o código sem o seu ok no layout. Você vê o resultado antes de ele existir.</p>
+          </article>
+          <article class="guarantee reveal">
+            <div class="guarantee-icon"><svg aria-hidden="true"><use href="#tag"></use></svg></div>
+            <h3>Preço fechado</h3>
+            <p>O valor combinado na proposta é o valor final. Sem cobrança extra escondida.</p>
+          </article>
+          <article class="guarantee reveal">
+            <div class="guarantee-icon"><svg aria-hidden="true"><use href="#refresh"></use></svg></div>
+            <h3>Ajustes incluídos</h3>
+            <p>Rodadas de revisão já fazem parte do pacote, até ficar do jeito que você imaginou.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FASE 7 · DICAS DO NPC (FAQ) ============ -->
+    <section class="section section-white" id="duvidas" aria-labelledby="faq-title">
+      <div class="container faq-layout">
+        <div class="section-head reveal">
+          <span class="hud-chip">Fase 7 · Dicas do NPC</span>
+          <h2 id="faq-title">Perguntas frequentes.</h2>
+          <p>Ficou alguma dúvida de fora? <a href="#contato">Me pergunte direto.</a></p>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Meu canal ainda é pequeno. Vale a pena?</summary>
+            <p>Vale, e esse é o melhor momento. Quem chega agora encontra uma casa organizada, e você não precisa migrar ninguém depois. Os pacotes foram pensados para caber em quem está começando.</p>
+          </details>
+          <details>
+            <summary>Quanto tempo leva?</summary>
+            <p>Depende do projeto, e o prazo vem fechado por escrito na proposta, antes de você pagar qualquer coisa. Páginas de uma seção só são bem mais rápidas que um site completo.</p>
+          </details>
+          <details>
+            <summary>Vou ter que pagar hospedagem todo mês?</summary>
+            <p>Na maioria dos casos, não. Os sites são publicados na Cloudflare, que tem plano gratuito para esse tipo de projeto. Você paga só o domínio, uma vez por ano. Se o seu projeto tiver algum custo de servidor (como alguns bots), ele aparece na proposta.</p>
+          </details>
+          <details>
+            <summary>E se eu quiser mudar algo depois da entrega?</summary>
+            <p>O site é seu. Pequenos ajustes podem ser combinados a qualquer momento, e eu te mostro como atualizar o que for simples por conta própria.</p>
+          </details>
+          <details>
+            <summary>Eu não entendo nada de programação. Tudo bem?</summary>
+            <p>Tudo ótimo. Você fala do seu público e dos seus objetivos; a parte técnica é comigo. Tudo é explicado em português claro.</p>
+          </details>
+          <details>
+            <summary>Você atende fora de Minas Gerais?</summary>
+            <p>Sim. Todo o trabalho é online, então atendo criadores de qualquer lugar do Brasil.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FASE FINAL · PLAYER 2 (contato) ============ -->
+    <section class="section section-final" id="contato" aria-labelledby="final-title">
+      <img class="cloud-top" src="assets/cloud-top.webp" alt="" width="2172" height="290" aria-hidden="true" loading="lazy">
+      <div class="container final-layout">
+        <div class="final-copy reveal">
+          <span class="hud-chip hud-chip-light">Fase final · Player 2, pronto?</span>
+          <h2 id="final-title">Seu projeto pode começar esta semana.</h2>
+          <p>Me conte sua ideia. Em até 24h você recebe uma resposta com os próximos passos. Sem compromisso e sem enrolação.</p>
+          <ul class="hero-proof final-proof">
+            <li><svg aria-hidden="true"><use href="#check"></use></svg>Orçamento grátis</li>
+            <li><svg aria-hidden="true"><use href="#check"></use></svg>Você aprova antes</li>
+            <li><svg aria-hidden="true"><use href="#check"></use></svg>Preço fechado</li>
+          </ul>
+          <a class="mail-link" href="mailto:contato@rutorin.com"><svg aria-hidden="true"><use href="#mail"></use></svg>contato@rutorin.com</a>
+        </div>
+        <!-- Formulário: cole o endereço do Formspree em data-endpoint (ex.: https://formspree.io/f/xxxxabcd).
+             Sem endereço, o envio abre o app de e-mail do visitante com a mensagem pronta. -->
+        <form class="contact-form reveal" data-endpoint="" data-email="contato@rutorin.com" novalidate>
+          <label>Seu nome
+            <input type="text" name="nome" autocomplete="name" required>
+          </label>
+          <label>Seu e-mail
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>Qual é a sua classe?
+            <select name="classe">
+              <option>Streamer ou criador</option>
+              <option>Dev indie</option>
+              <option>Portal de conteúdo</option>
+              <option>Outro</option>
+            </select>
+          </label>
+          <label>Conte sua ideia
+            <textarea name="mensagem" rows="4" required placeholder="O que você imagina e se tem um prazo em mente."></textarea>
+          </label>
+          <button class="button button-cta" type="submit"><svg aria-hidden="true"><use href="#play"></use></svg><span>Enviar e começar</span></button>
+          <p class="form-privacy">Seus dados são usados só para responder ao seu contato. Veja a <a href="privacidade/">Política de Privacidade</a>.</p>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/rutorin-logo.webp" alt="Rutorin" width="600" height="152" loading="lazy">
+        <p>Sites, bots e design para quem vive da internet.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Rodapé">
+        <a href="#classes">Para quem</a>
+        <a href="#power-ups">Pacotes</a>
+        <a href="#projetos">Projetos</a>
+        <a href="blog/">Blog</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a href="https://ko-fi.com/rutorin/shop" target="_blank" rel="noopener noreferrer">Shop</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span data-year>2026</span> Rutorin · Feito à mão em Varginha, MG</span>
+      <nav class="footer-legal" aria-label="Documentos legais"><a href="privacidade/">Política de Privacidade</a><a href="tratamento-de-dados/">Tratamento de Dados</a></nav>
+      <a href="mailto:contato@rutorin.com">contato@rutorin.com</a>
+    </div>
+  </footer>
+</body>
+</html>

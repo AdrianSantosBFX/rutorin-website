@@ -1,0 +1,25 @@
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Dependências e builds (caso algum dia sejam usados)
+node_modules/
+dist/
+.wrangler/
+
+# Segredos: nunca envie chaves, tokens ou senhas para o GitHub
+.env
+.env.*
+*.pem
+*.key
+
+# Rascunhos locais
+_rascunhos/
+*.psd
+*.fig

@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1035b5">
+  <title>Rutorin · Websites and bots for streamers, indie devs and creators</title>
+  <meta name="description" content="Websites, Discord and Twitch bots, and custom design for streamers, indie devs and creators. You approve the layout before a single line of code. Free quote within 24h.">
+  <link rel="canonical" href="https://rutorin.com/en/">
+  <link rel="alternate" hreflang="pt" href="https://rutorin.com/">
+  <link rel="alternate" hreflang="en" href="https://rutorin.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://rutorin.com/en/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:url" content="https://rutorin.com/en/">
+  <meta property="og:title" content="Rutorin · Your community deserves more than a link in bio">
+  <meta property="og:description" content="Websites, bots and custom design for streamers, indie devs and creators.">
+  <meta property="og:image" content="https://rutorin.com/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fredoka-600.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="../assets/gamer-room.webp" as="image">
+  <!-- Google Analytics (GA4): troque G-XXXXXXXXXX pelo seu ID e apague as linhas de comentário em volta.
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  -->
+  <link rel="stylesheet" href="../styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="gamepad" viewBox="0 0 32 32"><path d="M10 8h12c4 0 5.3 4.6 6.5 9.4 1.2 4.9.6 7.4-1.7 7.4-2 0-4.5-3.8-6.4-3.8h-8.8c-1.9 0-4.4 3.8-6.4 3.8-2.3 0-2.9-2.5-1.7-7.4C4.7 12.6 6 8 10 8Z" fill="currentColor"/><path d="M10.5 12v7m-3.5-3.5h7" fill="none" stroke="#2876ff" stroke-width="2.2" stroke-linecap="round"/><circle cx="22" cy="13" r="1.5" fill="#2876ff"/><circle cx="25" cy="17" r="1.5" fill="#2876ff"/></symbol>
+    <symbol id="layers" viewBox="0 0 32 32"><path d="m3 10 13-7 13 7-13 7L3 10Zm0 7 13 7 13-7M3 24l13 7 13-7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="sparkles" viewBox="0 0 24 24"><path d="m10 3 2.5 6.5L19 12l-6.5 2.5L10 21l-2.5-6.5L1 12l6.5-2.5L10 3Zm10-2 1.1 2.9L24 5l-2.9 1.1L20 9l-1.1-2.9L16 5l2.9-1.1L20 1Z" fill="currentColor"/></symbol>
+    <symbol id="play" viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5Z" fill="currentColor"/></symbol>
+    <symbol id="heart" viewBox="0 0 7 7"><path d="M1 0h2v1h1V0h2v1h1v3H6v1H5v1H4v1H3V6H2V5H1V4H0V1h1Z" fill="currentColor"/></symbol>
+    <symbol id="headphones" viewBox="0 0 32 32"><path d="M6 19v-3a10 10 0 0 1 20 0v3" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M7.5 9.5 5 3.5l6 3M24.5 9.5l2.5-6-6 3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><rect x="3.5" y="17" width="6.5" height="10" rx="3" fill="currentColor"/><rect x="22" y="17" width="6.5" height="10" rx="3" fill="currentColor"/></symbol>
+    <symbol id="news" viewBox="0 0 32 32"><path d="M5 6h17v20H8a3 3 0 0 1-3-3V6Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M22 11h5v12a3 3 0 0 1-3 3h-2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M9.5 11h8M9.5 16h8M9.5 21h5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="bot" viewBox="0 0 32 32"><rect x="5" y="10" width="22" height="16" rx="5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M16 5v5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="4" r="2" fill="currentColor"/><circle cx="11.5" cy="18" r="2" fill="currentColor"/><circle cx="20.5" cy="18" r="2" fill="currentColor"/><path d="M2 16v5M30 16v5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="shield" viewBox="0 0 32 32"><path d="M16 3 5 7v8c0 7 4.7 12.3 11 14 6.3-1.7 11-7 11-14V7L16 3Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="m11 16 3.5 3.5L21 13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="tag" viewBox="0 0 32 32"><path d="M4 5v10l13 13 11-11L15 4H5a1 1 0 0 0-1 1Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="10.5" cy="10.5" r="2.5" fill="currentColor"/></symbol>
+    <symbol id="refresh" viewBox="0 0 32 32"><path d="M26 12A10.5 10.5 0 0 0 7 9.5M6 20a10.5 10.5 0 0 0 19 2.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M6 4v6h6M26 28v-6h-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="Rutorin, back to top" draggable="false"><img src="../assets/rutorin-logo.webp" alt="Rutorin" width="600" height="152" draggable="false"></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a class="nav-link" href="#classes">Who it's for</a>
+        <a class="nav-link" href="#power-ups">Pricing</a>
+        <a class="nav-link" href="#projetos">Projects</a>
+        <a class="nav-link" href="../blog/">Blog</a>
+        <a class="nav-link" href="#duvidas">FAQ</a>
+        <a class="nav-link" href="https://ko-fi.com/rutorin/shop" target="_blank" rel="noopener noreferrer">Shop<span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a class="lang-switch" href="../" hreflang="pt" lang="pt-BR" data-lang-switch="pt" aria-label="Versão em português"><svg aria-hidden="true"><use href="#globe"></use></svg>PT</a>
+      </nav>
+      <a class="commission-button" href="#contato"><svg class="commission-icon" aria-hidden="true"><use href="#sparkles"></use></svg><span>Start a project</span><span class="commission-sheen" aria-hidden="true"></span></a>
+      <button class="menu-button" popovertarget="mobile-menu" aria-label="Open menu"><svg><use href="#menu"></use></svg></button>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobile-menu" popover aria-label="Menu">
+    <div class="mobile-menu-heading"><span>Explore Rutorin</span><button class="close-button" popovertarget="mobile-menu" popovertargetaction="hide" aria-label="Close menu"><svg><use href="#close"></use></svg></button></div>
+    <a href="#classes">Who it's for</a>
+    <a href="#power-ups">Pricing</a>
+    <a href="#projetos">Projects</a>
+    <a href="../blog/">Blog</a>
+    <a href="#duvidas">FAQ</a>
+    <a href="https://ko-fi.com/rutorin/shop" target="_blank" rel="noopener noreferrer">Shop</a>
+    <a href="../" hreflang="pt" lang="pt-BR" data-lang-switch="pt" class="mobile-lang"><svg aria-hidden="true"><use href="#globe"></use></svg>Versão em português</a>
+    <a href="#contato" class="mobile-cta">Start my project</a>
+  </nav>
+
+  <main>
+    <!-- ============ HERO · TITLE SCREEN ============ -->
+    <section class="world" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="hero-eyebrow"><svg aria-hidden="true"><use href="#sparkles"></use></svg>For streamers, indie devs and creators</p>
+        <h1 id="hero-title"><span>Your community deserves</span> <span>more than a link in bio.</span></h1>
+        <p class="hero-sub">Websites, Discord and Twitch bots, and custom design, built so your audience finds you and sticks around. You approve the layout before a single line of code is written.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contato"><svg aria-hidden="true"><use href="#play"></use></svg><span>Start my project</span></a>
+          <a class="button button-secondary" href="#projetos"><svg aria-hidden="true"><use href="#layers"></use></svg><span>See projects</span></a>
+        </div>
+        <ul class="hero-proof" aria-label="Guarantees">
+          <li><svg aria-hidden="true"><use href="#check"></use></svg>Free quote within 24h</li>
+          <li><svg aria-hidden="true"><use href="#check"></use></svg>No commitment</li>
+          <li><svg aria-hidden="true"><use href="#check"></use></svg>Limited spots each month</li>
+        </ul>
+      </div>
+      <div class="ambient-sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <img class="cloud-divider" src="../assets/cloud-divider.webp" alt="" width="2172" height="724" aria-hidden="true">
+    </section>
+
+    <!-- ============ LEVEL 1 · GAME OVER (cost of inaction) ============ -->
+    <section class="section section-white" id="game-over" aria-labelledby="go-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="hud-chip"><span class="lives" aria-hidden="true"><svg><use href="#heart"></use></svg><svg class="lost"><use href="#heart"></use></svg><svg class="lost"><use href="#heart"></use></svg></span>Level 1 · Game over</span>
+          <h2 id="go-title">Putting it off has a price too.</h2>
+          <p>Without a place of your own online, every month costs you a few lives:</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card pain reveal">
+            <span class="pain-num">−1 life</span>
+            <h3>Your audience lives on someone else's land</h3>
+            <p>One algorithm change and the reach you spent months building disappears overnight. Without a website, there's nowhere to take your audience.</p>
+          </article>
+          <article class="card pain reveal">
+            <span class="pain-num">−1 life</span>
+            <h3>Sponsorships pass you by</h3>
+            <p>Brands, publishers and press look for a professional place to understand who you are. A link in bio doesn't close deals.</p>
+          </article>
+          <article class="card pain reveal">
+            <span class="pain-num">−1 life</span>
+            <h3>You become your community's bot</h3>
+            <p>Announcing the stream, moderating Discord, giving roles to newcomers. Repetitive work that steals the time you should spend creating.</p>
+          </article>
+        </div>
+        <p class="continue-line reveal">The good news: <strong>you can win every one of those lives back.</strong></p>
+      </div>
+    </section>
+
+    <!-- Scrolling ticker -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Creator websites</span><i>✦</i><span>Game landing pages</span><i>✦</i><span>Discord bots</span><i>✦</i><span>Twitch bots</span><i>✦</i><span>Press kits</span><i>✦</i><span>Figma design</span><i>✦</i><span>SEO</span><i>✦</i><span>Copywriting</span><i>✦</i>
+        <span>Creator websites</span><i>✦</i><span>Game landing pages</span><i>✦</i><span>Discord bots</span><i>✦</i><span>Twitch bots</span><i>✦</i><span>Press kits</span><i>✦</i><span>Figma design</span><i>✦</i><span>SEO</span><i>✦</i><span>Copywriting</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ LEVEL 2 · CHOOSE YOUR CLASS ============ -->
+    <section class="section section-soft" id="classes" aria-labelledby="classes-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="hud-chip">Level 2 · Choose your class</span>
+          <h2 id="classes-title">Built for people who create online.</h2>
+          <p>Every creator has a different quest. Pick yours and see what fits you.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card class-card reveal">
+            <span class="player-tag">P1</span>
+            <div class="class-icon"><svg aria-hidden="true"><use href="#headphones"></use></svg></div>
+            <h3>Streamer &amp; creator</h3>
+            <p class="class-quest">Quest: turn your audience into a community and sponsorships.</p>
+            <ul class="check-list">
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Your own site with a stream schedule</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Media kit for brands</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Bots that handle chat and Discord</li>
+            </ul>
+            <a class="select-button" href="#pacote-criador">Select <svg aria-hidden="true"><use href="#arrow"></use></svg></a>
+          </article>
+          <article class="card class-card reveal">
+            <span class="player-tag">P2</span>
+            <div class="class-icon"><svg aria-hidden="true"><use href="#gamepad"></use></svg></div>
+            <h3>Indie dev</h3>
+            <p class="class-quest">Quest: reach launch day with wishlists and press coverage.</p>
+            <ul class="check-list">
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Game landing page</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Press kit ready for journalists</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>An organized Discord community</li>
+            </ul>
+            <a class="select-button" href="#pacote-indie">Select <svg aria-hidden="true"><use href="#arrow"></use></svg></a>
+          </article>
+          <article class="card class-card reveal">
+            <span class="player-tag">P3</span>
+            <div class="class-icon"><svg aria-hidden="true"><use href="#news"></use></svg></div>
+            <h3>Content site</h3>
+            <p class="class-quest">Quest: grow on Google and keep readers around.</p>
+            <ul class="check-list">
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Fast, well-structured website</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Technical and content SEO</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Copy that converts readers</li>
+            </ul>
+            <a class="select-button" href="#missao-personalizada">Select <svg aria-hidden="true"><use href="#arrow"></use></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LEVEL 3 · POWER-UPS (packages and pricing) ============ -->
+    <section class="section section-blue" id="power-ups" aria-labelledby="power-title">
+      <div class="container">
+        <div class="section-head section-head-center reveal">
+          <span class="hud-chip hud-chip-light">Level 3 · Power-ups</span>
+          <h2 id="power-title">Pick your power-up.</h2>
+          <p>Clear pricing from the start. No fine print, no surprises along the way.</p>
+        </div>
+        <!-- ATENÇÃO: os preços em dólar abaixo são SUGESTÕES. Ajuste antes de publicar. -->
+        <div class="grid grid-3 packages">
+          <article class="card package reveal" id="pacote-criador">
+            <span class="package-for">Streamers &amp; creators</span>
+            <h3>Creator Page</h3>
+            <p class="price">starting at <strong>US$ 149</strong></p>
+            <ul class="check-list">
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>One-page site with your own identity</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Stream schedule, socials and links</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Media kit for sponsorships</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Domain and publishing set up</li>
+            </ul>
+            <a class="button button-outline" href="#contato">I want this</a>
+          </article>
+          <article class="card package package-featured reveal" id="pacote-indie">
+            <span class="package-badge">Most complete</span>
+            <span class="package-for">Indie devs</span>
+            <h3>Indie Launch Kit</h3>
+            <p class="price">starting at <strong>US$ 390</strong></p>
+            <ul class="check-list">
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Landing page with trailer and screenshots</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Press kit for journalists and creators</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Wishlist and newsletter calls to action</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>SEO and launch copy</li>
+            </ul>
+            <a class="button button-primary" href="#contato">I want this</a>
+          </article>
+          <article class="card package reveal" id="pacote-bot">
+            <span class="package-for">Discord &amp; Twitch</span>
+            <h3>Guardian Bot</h3>
+            <p class="price">starting at <strong>US$ 119</strong></p>
+            <ul class="check-list">
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Welcome messages and auto roles</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Automatic stream and video alerts</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Moderation and custom commands</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Installed on your server</li>
+            </ul>
+            <a class="button button-outline" href="#contato">I want this</a>
+          </article>
+        </div>
+        <div class="custom-quest reveal" id="missao-personalizada">
+          <div>
+            <h3>Custom quest</h3>
+            <p>A content site, SEO, a redesign or something not on the list? Tell me your goal and I'll put together a proposal.</p>
+          </div>
+          <a class="button button-secondary" href="#contato">Request a proposal <svg aria-hidden="true"><use href="#arrow"></use></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LEVEL 4 · THE QUEST (process) ============ -->
+    <section class="section section-white" id="quest" aria-labelledby="quest-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="hud-chip">Level 4 · The quest</span>
+          <h2 id="quest-title">From first chat to live site, in 4 steps.</h2>
+          <p>You don't need to understand code. You just need to know where you want to go.</p>
+        </div>
+        <ol class="quest-path">
+          <li class="reveal">
+            <span class="quest-node">01</span>
+            <h3>Chat</h3>
+            <p>You tell me your idea, your audience and your goal. No commitment.</p>
+          </li>
+          <li class="reveal">
+            <span class="quest-node">02</span>
+            <h3>Proposal</h3>
+            <p>Scope, timeline and price agreed in writing, before you pay anything.</p>
+          </li>
+          <li class="reveal">
+            <span class="quest-node">03</span>
+            <h3>Approved design</h3>
+            <p>The layout is designed in Figma. I only start coding after your OK.</p>
+          </li>
+          <li class="reveal">
+            <span class="quest-node quest-node-final">04</span>
+            <h3>Delivery</h3>
+            <p>Site live, bot running and you knowing how to use it all. And I'm around if you need me.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ LEVEL 5 · SAVE FILES (proof) ============ -->
+    <section class="section section-soft" id="projetos" aria-labelledby="proj-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="hud-chip">Level 5 · Save files</span>
+          <h2 id="proj-title">Projects I built from scratch.</h2>
+          <p>Code, design and copy, all made by me. Your project gets the same care.</p>
+        </div>
+        <div class="projects">
+          <article class="card project project-main reveal">
+            <img src="../assets/skyward-legends.webp" alt="Scene from Skyward Legends: floating islands in a blue sky" width="960" height="540" loading="lazy">
+            <div class="project-body">
+              <span class="project-tag">Game · JavaScript</span>
+              <h3>Skyward Legends</h3>
+              <p>A browser RPG with story, battles and choices, with the game engine written from scratch.</p>
+            </div>
+          </article>
+          <div class="project-side">
+            <article class="card project reveal">
+              <div class="project-body">
+                <span class="project-tag">Website · Design + code</span>
+                <h3>rutorin.com</h3>
+                <p>This very site: illustration, Figma design, code and copy. Fast and hosted on Cloudflare.</p>
+              </div>
+            </article>
+            <div class="terminal reveal" role="img" aria-label="Status: stack HTML, CSS, JavaScript, Astro and Node; Discord and Twitch bots; Figma design; deployed on Cloudflare; currently accepting projects.">
+              <div class="terminal-bar"><i></i><i></i><i></i><span>rutorin://status</span></div>
+              <pre><span class="t-line"><span class="t-dim">$</span> rutorin status --all</span>
+<span class="t-line"><span class="t-key">stack </span> HTML · CSS · JS · Astro · Node</span>
+<span class="t-line"><span class="t-key">bots  </span> Discord · Twitch</span>
+<span class="t-line"><span class="t-key">design</span> Figma</span>
+<span class="t-line"><span class="t-key">deploy</span> Cloudflare</span>
+<span class="t-line"><span class="t-key">slots </span> <span class="t-ok">● accepting projects</span><span class="t-cursor" aria-hidden="true"></span></span></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LEVEL 6 · CONTINUE? (guarantees) ============ -->
+    <section class="section section-soft" id="garantias" aria-labelledby="cont-title">
+      <div class="container">
+        <div class="section-head section-head-center reveal">
+          <span class="hud-chip">Level 6 · Continue?</span>
+          <h2 id="cont-title">The risk is on me, not you.</h2>
+        </div>
+        <div class="grid grid-3">
+          <article class="guarantee reveal">
+            <div class="guarantee-icon"><svg aria-hidden="true"><use href="#shield"></use></svg></div>
+            <h3>You approve first</h3>
+            <p>Nothing gets coded without your OK on the layout. You see the result before it exists.</p>
+          </article>
+          <article class="guarantee reveal">
+            <div class="guarantee-icon"><svg aria-hidden="true"><use href="#tag"></use></svg></div>
+            <h3>Fixed price</h3>
+            <p>The price agreed in the proposal is the final price. No hidden extra charges.</p>
+          </article>
+          <article class="guarantee reveal">
+            <div class="guarantee-icon"><svg aria-hidden="true"><use href="#refresh"></use></svg></div>
+            <h3>Revisions included</h3>
+            <p>Revision rounds are part of the package, until it looks the way you imagined.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LEVEL 7 · NPC TIPS (FAQ) ============ -->
+    <section class="section section-white" id="duvidas" aria-labelledby="faq-title">
+      <div class="container faq-layout">
+        <div class="section-head reveal">
+          <span class="hud-chip">Level 7 · NPC tips</span>
+          <h2 id="faq-title">Frequently asked questions.</h2>
+          <p>Didn't find your question? <a href="#contato">Ask me directly.</a></p>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>My channel is still small. Is it worth it?</summary>
+            <p>It is, and now is the best time. People who arrive now find an organized home, and you won't need to move anyone later. The packages are designed to fit creators who are just starting out.</p>
+          </details>
+          <details>
+            <summary>How long does it take?</summary>
+            <p>It depends on the project, and the timeline is set in writing in the proposal, before you pay anything. A one-page site is much faster than a full website.</p>
+          </details>
+          <details>
+            <summary>Will I have to pay for hosting every month?</summary>
+            <p>In most cases, no. Sites are published on Cloudflare, which has a free plan for this kind of project. You only pay for the domain, once a year. If your project has a server cost (like some bots), it's listed in the proposal.</p>
+          </details>
+          <details>
+            <summary>What if I want to change something after delivery?</summary>
+            <p>The site is yours. Small changes can be arranged anytime, and I'll show you how to update the simple stuff on your own.</p>
+          </details>
+          <details>
+            <summary>I don't know anything about programming. Is that OK?</summary>
+            <p>Totally. You tell me about your audience and goals; the technical side is on me. Everything is explained in plain English.</p>
+          </details>
+          <details>
+            <summary>Do you work with clients outside Brazil?</summary>
+            <p>Yes. All the work happens online and in English, so I work with creators anywhere in the world. Prices are in US dollars.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL LEVEL · PLAYER 2 (contact) ============ -->
+    <section class="section section-final" id="contato" aria-labelledby="final-title">
+      <img class="cloud-top" src="../assets/cloud-top.webp" alt="" width="2172" height="290" aria-hidden="true" loading="lazy">
+      <div class="container final-layout">
+        <div class="final-copy reveal">
+          <span class="hud-chip hud-chip-light">Final level · Player 2, ready?</span>
+          <h2 id="final-title">Your project can start this week.</h2>
+          <p>Tell me your idea. Within 24h you'll get a reply with the next steps. No commitment, no runaround.</p>
+          <ul class="hero-proof final-proof">
+            <li><svg aria-hidden="true"><use href="#check"></use></svg>Free quote</li>
+            <li><svg aria-hidden="true"><use href="#check"></use></svg>You approve first</li>
+            <li><svg aria-hidden="true"><use href="#check"></use></svg>Fixed price</li>
+          </ul>
+          <a class="mail-link" href="mailto:contato@rutorin.com"><svg aria-hidden="true"><use href="#mail"></use></svg>contato@rutorin.com</a>
+        </div>
+        <!-- Formulário: cole o endereço do Formspree em data-endpoint (ex.: https://formspree.io/f/xxxxabcd).
+             Sem endereço, o envio abre o app de e-mail do visitante com a mensagem pronta. -->
+        <form class="contact-form reveal" data-endpoint="" data-email="contato@rutorin.com" novalidate>
+          <label>Your name
+            <input type="text" name="nome" autocomplete="name" required>
+          </label>
+          <label>Your email
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>What's your class?
+            <select name="classe">
+              <option>Streamer or creator</option>
+              <option>Indie dev</option>
+              <option>Content site</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>Tell me your idea
+            <textarea name="mensagem" rows="4" required placeholder="What you have in mind and whether you have a deadline."></textarea>
+          </label>
+          <button class="button button-cta" type="submit"><svg aria-hidden="true"><use href="#play"></use></svg><span>Send and start</span></button>
+          <p class="form-privacy">Your data is only used to reply to you. See our <a href="privacy/">Privacy Policy</a>.</p>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="../assets/rutorin-logo.webp" alt="Rutorin" width="600" height="152" loading="lazy">
+        <p>Websites, bots and design for people who live online.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#classes">Who it's for</a>
+        <a href="#power-ups">Pricing</a>
+        <a href="#projetos">Projects</a>
+        <a href="../blog/">Blog</a>
+        <a href="#duvidas">FAQ</a>
+        <a href="https://ko-fi.com/rutorin/shop" target="_blank" rel="noopener noreferrer">Shop</a>
+        <a href="#contato">Contact</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span data-year>2026</span> Rutorin · Handmade in Brazil</span>
+      <nav class="footer-legal" aria-label="Legal documents"><a href="privacy/">Privacy Policy</a><a href="data-processing/">Data Processing</a></nav>
+      <a href="mailto:contato@rutorin.com">contato@rutorin.com</a>
+    </div>
+  </footer>
+</body>
+</html>
