@@ -529,6 +529,15 @@ mark.todo{padding:1px 5px;border-radius:6px;background:#ffe58a;color:#5c4400;fon
   .health-strip-price .button,.custom-quest-actions,.custom-quest-actions .button{width:100%}
 }
 
+/* Botão do chat ao vivo (assets/chat.js carrega o tawk.to só no clique) */
+.chat-launcher{position:fixed;right:20px;bottom:20px;z-index:30;display:inline-flex;align-items:center;gap:9px;min-height:52px;padding:12px 20px;border:1.5px solid #cefbff;border-radius:999px;color:#07194e;font:inherit;font-size:1rem;font-weight:600;background:linear-gradient(115deg,#a3f3ff 0%,#53daff 48%,#75baff 100%);box-shadow:0 4px 0 #0753b8,0 10px 30px rgba(3,12,64,.35);transition:translate .2s ease,box-shadow .2s ease}
+.chat-launcher svg{width:22px;height:22px;flex:none}
+.chat-launcher:hover{translate:0 -2px;box-shadow:0 7px 0 #0753b8,0 14px 34px rgba(3,12,64,.4)}
+.chat-launcher:active{translate:0 2px;box-shadow:0 2px 0 #0753b8}
+.chat-launcher.is-loading{opacity:.85;cursor:progress}
+.chat-launcher.is-loading svg{animation:blink 1s steps(1) infinite}
+@media(max-width:540px){.chat-launcher{right:14px;bottom:14px;min-height:48px;padding:10px 16px;font-size:.92rem}}
+
 /* =========================================================
    RESPONSIVO
    ========================================================= */
