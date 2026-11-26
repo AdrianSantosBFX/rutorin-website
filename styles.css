@@ -491,6 +491,8 @@ mark.todo{padding:1px 5px;border-radius:6px;background:#ffe58a;color:#5c4400;fon
 
 /* Planos mensais */
 .svc-plans{display:grid;grid-template-columns:repeat(2,minmax(0,360px));justify-content:center;gap:clamp(1rem,2vw,1.6rem)}
+.svc-plan .check-list{margin-bottom:16px}
+.svc-fine{margin:0 0 22px!important;padding:12px 14px;border-radius:14px;background:var(--soft);font-size:.9rem;line-height:1.45!important}
 .svc-plan .price strong span{margin-left:4px;font-size:1.1rem;font-weight:500;color:var(--ink-soft)}
 .svc-custom-price{margin-top:10px!important;color:#bff6ff!important}
 .svc-custom-price strong{color:var(--white);font-size:1.2rem}
