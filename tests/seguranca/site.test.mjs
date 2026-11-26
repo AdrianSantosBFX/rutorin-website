@@ -35,7 +35,7 @@ test('cabeçalhos de segurança presentes', async () => {
 
 test('CSP libera exatamente os scripts embutidos do HTML', async () => {
   const csp = (await get('/')).headers.get('content-security-policy') || '';
-  for (const path of ['/', '/en/', '/blog/', '/privacidade/', '/servicos/', '/en/services/']) {
+  for (const path of ['/', '/en/', '/blog/', '/privacidade/', '/termos/', '/en/terms/', '/servicos/', '/en/services/']) {
     const html = (await (await get(path)).text()).replace(/<!--[\s\S]*?-->/g, '');
     const scripts = [...html.matchAll(/<script(?![^>]*\bsrc=)(?![^>]*ld\+json)[^>]*>([\s\S]*?)<\/script>/g)].map(m => m[1]);
     for (const code of scripts) {
