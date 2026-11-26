@@ -17,6 +17,7 @@
     mailOpened: 'Abrimos seu app de e-mail com a mensagem pronta. É só enviar!',
     sending: 'Enviando...',
     sent: 'Mensagem enviada! Você recebe uma resposta em até 24h.',
+    tooMany: 'Muitas tentativas seguidas. Aguarde uns 10 segundos e envie de novo.',
     failed: email => `Não foi possível enviar agora. Escreva para ${email}.`,
     subject: cls => `Novo projeto · ${cls}`,
     body: d => `Nome: ${d.get('nome')}\nE-mail: ${d.get('email')}\nClasse: ${d.get('classe')}\n\n${d.get('mensagem')}`
@@ -25,6 +26,7 @@
     mailOpened: 'We opened your email app with the message ready. Just hit send!',
     sending: 'Sending...',
     sent: 'Message sent! You will get a reply within 24h.',
+    tooMany: 'Too many attempts in a row. Wait about 10 seconds and try again.',
     failed: email => `Could not send right now. Please write to ${email}.`,
     subject: cls => `New project · ${cls}`,
     body: d => `Name: ${d.get('nome')}\nEmail: ${d.get('email')}\nClass: ${d.get('classe')}\n\n${d.get('mensagem')}`
@@ -350,6 +352,7 @@
       setStatus(t.sending, '');
       try {
         const response = await fetch(endpoint, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+        if (response.status === 429) { setStatus(t.tooMany, 'error'); return; }
         if (!response.ok) throw new Error(String(response.status));
         form.reset();
         setStatus(t.sent, 'ok');

@@ -31,16 +31,25 @@ sitemap.xml    mapa do site para o Google
 | Hero · tela de título | Promessa, para quem é, CTA e garantias. É onde a venda acontece. |
 | Fase 1 · Game over | O custo de deixar para depois (vende contra a inércia). |
 | Fase 2 · Escolha sua classe | Streamer, dev indie ou portal: a pessoa se reconhece. |
-| Fase 3 · Power-ups | Pacotes com preço "a partir de". |
+| Fase 3 · Power-ups | Os 3 carros-chefe, o destaque do Health Check e o link para o catálogo completo. |
 | Fase 4 · A quest | Processo em 4 etapas: tira o medo de dor de cabeça. |
 | Fase 5 · Save files | Prova: projetos e stack. |
 | Fase 6 · Continue? | Garantias: o risco fica com você. |
 | Fase 7 · Dicas do NPC | Perguntas frequentes (objeções). |
 | Fase final · Player 2 | CTA final com formulário. |
 
+## Catálogo de serviços (`servicos/` e `en/services/`)
+
+A página de serviços lista todos os pacotes, organizados pelo objetivo do cliente: diagnóstico (Health Check),
+sites, comunidade e bots, planos mensais e adicionais. O português mostra os preços em **R$** e o inglês em **US$**.
+
+**Ao mudar um preço ou um pacote, mude nos 4 lugares:** `servicos/index.html`, `en/services/index.html`
+e os cards da Fase 3 em `index.html` e `en/index.html`. O teste `tests/site/links.test.mjs` avisa se o preço
+de um pacote da home ficar diferente do catálogo.
+
 ## Antes de publicar: revise
 
-1. **Preços** (procure por `R$` no `index.html`). Os valores atuais são sugestões.
+1. **Preços**: estão no catálogo (`servicos/` e `en/services/`) e nos cards da home. Veja a seção acima.
 2. **Promessas**: "resposta em até 24h", "poucas vagas por mês" e "ajustes incluídos" precisam ser verdade na prática.
 3. **Formulário**: ative o envio de e-mails seguindo a seção "Formulário de contato" abaixo.
 4. **E-mail**: crie `contato@rutorin.com` no Email Routing da Cloudflare, encaminhando para o seu Yahoo.
@@ -152,6 +161,39 @@ tratamento-de-dados/    Política de Tratamento de Dados  en/data-processing/   
   pagamento e o provedor de hospedagem de bots. Quando terminar, apague `<mark class="todo">` e `</mark>` em volta do texto.
 - Sempre que mudar algo nos serviços usados (novo formulário, Analytics, pagamento), atualize a política e a data no topo.
 - Os textos são um ponto de partida bem fundamentado, mas não substituem a revisão de um advogado.
+
+## Segurança e testes automatizados
+
+**Proteções no site:**
+- `_headers`: cabeçalhos de segurança em todas as páginas (HSTS, CSP, anti-clickjacking, nosniff, Permissions-Policy).
+  A CSP só libera os dois scripts embutidos no HTML, pelo hash. **Se editar esses scripts** (o que adiciona a classe `js`
+  e o que detecta o idioma) ou **ativar o Google Analytics**, rode os testes: eles mostram o hash novo a colocar no `_headers`.
+- `404.html`: página "Game over" para endereços inexistentes (antes, qualquer endereço mostrava a home com status 200).
+- `_redirects`: esconde arquivos internos (LEIA-ME, README, wrangler.jsonc, .gitignore, código do Worker, testes).
+- `/api/contato`: exige que o envio venha do próprio site (cabeçalho Origin), recusa corpo acima de 32 KB e tem
+  campo-armadilha e tempo mínimo contra robôs. O e-mail sai em texto puro (sem HTML).
+
+**Testes** (precisam só do Node 22, nada para instalar):
+
+```
+node --test "tests/unit/*.test.mjs"        # formulário: função + Worker (offline)
+node --test "tests/site/*.test.mjs"        # links, âncoras, SEO, noopener, segredos (offline)
+node --test "tests/seguranca/*.test.mjs"   # site NO AR: cabeçalhos, arquivos expostos, /api/contato
+```
+
+Os testes de segurança nunca enviam e-mail: só mandam entradas inválidas ou bloqueadas. Para testar outro endereço:
+`BASE_URL=https://xxxx.rutorin-website.pages.dev node --test "tests/seguranca/*.test.mjs"`.
+
+O GitHub roda tudo sozinho (`.github/workflows/testes.yml`) a cada push e **todo dia às 08:17**. Se algo quebrar ou
+alguém mudar uma configuração da Cloudflare, você recebe um e-mail do GitHub avisando que o teste falhou.
+
+**Limite de envios (ativo):** regra "Limite do formulário de contato" em Security → Security rules → Rate limiting rules.
+Mais de 3 envios em 10 segundos do mesmo IP para `/api/contato` são bloqueados por 10 segundos (máximo do plano grátis).
+O formulário avisa o visitante para aguardar.
+
+**Se começar a chegar spam mesmo assim:**
+1. **Turnstile** (captcha invisível e grátis) no formulário, validado no Worker.
+2. **Repositório privado** no GitHub, se não quiser que o código e este LEIA-ME fiquem públicos.
 
 ## Publicar na Cloudflare
 

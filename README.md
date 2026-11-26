@@ -17,6 +17,7 @@ Inclui home de vendas em português e inglês, blog (devlog) e as políticas de 
 ```
 index.html               Home em português (R$)
 en/index.html            Home em inglês (US$)
+servicos/                Catálogo de serviços e preços (R$)   (en/services/ em US$)
 blog/                    Devlog: listagem, posts, modelo de post e feed RSS
 privacidade/             Política de Privacidade          (en/privacy/)
 tratamento-de-dados/     Política de Tratamento de Dados  (en/data-processing/)
@@ -26,7 +27,18 @@ assets/                  Imagens, fonte Fredoka e cursores
 functions/api/contato.js Recebe o formulário (Cloudflare Pages Function)
 worker-contato/          Worker que envia as mensagens por e-mail
 _redirects               Esconde arquivos internos do site publicado
+_headers                 Cabeçalhos de segurança (CSP, HSTS, anti-clickjacking)
+404.html                 Página "Game over" para endereços inexistentes
+tests/                   Testes automatizados (node --test)
+.github/workflows/       Roda os testes a cada push e todo dia
 sitemap.xml, robots.txt  SEO
+```
+
+## Testes
+
+```bash
+node --test "tests/unit/*.test.mjs" "tests/site/*.test.mjs"   # offline
+node --test "tests/seguranca/*.test.mjs"                      # contra o site no ar
 ```
 
 ## Rodar localmente

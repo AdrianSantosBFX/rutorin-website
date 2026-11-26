@@ -72,7 +72,7 @@
       <a class="brand" href="#inicio" aria-label="Rutorin, voltar ao início" draggable="false"><img src="assets/rutorin-logo.webp" alt="Rutorin" width="600" height="152" draggable="false"></a>
       <nav class="desktop-nav" aria-label="Navegação principal">
         <a class="nav-link" href="#classes">Para quem</a>
-        <a class="nav-link" href="#power-ups">Pacotes</a>
+        <a class="nav-link" href="servicos/">Serviços</a>
         <a class="nav-link" href="#projetos">Projetos</a>
         <a class="nav-link" href="blog/">Blog</a>
         <a class="nav-link" href="#duvidas">Dúvidas</a>
@@ -87,7 +87,7 @@
   <nav class="mobile-menu" id="mobile-menu" popover aria-label="Menu">
     <div class="mobile-menu-heading"><span>Explore a Rutorin</span><button class="close-button" popovertarget="mobile-menu" popovertargetaction="hide" aria-label="Fechar menu"><svg><use href="#close"></use></svg></button></div>
     <a href="#classes">Para quem</a>
-    <a href="#power-ups">Pacotes</a>
+    <a href="servicos/">Serviços</a>
     <a href="#projetos">Projetos</a>
     <a href="blog/">Blog</a>
     <a href="#duvidas">Dúvidas</a>
@@ -209,9 +209,9 @@
         <div class="section-head section-head-center reveal">
           <span class="hud-chip hud-chip-light">Fase 3 · Power-ups</span>
           <h2 id="power-title">Escolha seu power-up.</h2>
-          <p>Preço claro desde o início. Sem letras miúdas, sem surpresa no meio do caminho.</p>
+          <p>Preço claro desde o início. Estes são os mais pedidos; o <a class="link-light" href="servicos/">catálogo completo</a> tem todos os outros.</p>
         </div>
-        <!-- ATENÇÃO: os preços abaixo são SUGESTÕES. Ajuste antes de publicar. -->
+        <!-- Os preços abaixo precisam ser iguais aos do catálogo (servicos/index.html). -->
         <div class="grid grid-3 packages">
           <article class="card package reveal" id="pacote-criador">
             <span class="package-for">Streamers e criadores</span>
@@ -239,24 +239,38 @@
             <a class="button button-primary" href="#contato">Quero este</a>
           </article>
           <article class="card package reveal" id="pacote-bot">
-            <span class="package-for">Discord e Twitch</span>
+            <span class="package-for">Bots para Discord</span>
             <h3>Bot Guardião</h3>
-            <p class="price">a partir de <strong>R$ 390</strong></p>
+            <p class="price">a partir de <strong>R$ 490</strong></p>
             <ul class="check-list">
               <li><svg aria-hidden="true"><use href="#check"></use></svg>Boas-vindas e cargos automáticos</li>
               <li><svg aria-hidden="true"><use href="#check"></use></svg>Aviso automático de live e vídeos</li>
-              <li><svg aria-hidden="true"><use href="#check"></use></svg>Moderação e comandos personalizados</li>
-              <li><svg aria-hidden="true"><use href="#check"></use></svg>Instalação no seu servidor</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>Moderação básica</li>
+              <li><svg aria-hidden="true"><use href="#check"></use></svg>3 comandos personalizados</li>
             </ul>
             <a class="button button-outline" href="#contato">Quero este</a>
           </article>
         </div>
+        <div class="health-strip reveal" id="health-check">
+          <div>
+            <span class="package-for">Não sabe por onde começar?</span>
+            <h3>Health Check: diagnóstico do seu site ou bot</h3>
+            <p>Um relatório com os 10 problemas mais importantes, em ordem de prioridade, e o que fazer com cada um. Se você contratar um pacote em até 30 dias, o valor vira desconto.</p>
+          </div>
+          <div class="health-strip-price">
+            <span><small>preço fixo</small><strong>R$ 149</strong></span>
+            <a class="button button-cta" href="servicos/#diagnostico"><svg aria-hidden="true"><use href="#play"></use></svg><span>Ver detalhes</span></a>
+          </div>
+        </div>
         <div class="custom-quest reveal" id="missao-personalizada">
           <div>
-            <h3>Missão personalizada</h3>
-            <p>Portal de conteúdo, SEO, redesign ou algo que não está na lista? Me conte o objetivo e eu monto a proposta.</p>
+            <h3>Procurando outra coisa?</h3>
+            <p>Link Hub, landing page, montagem de servidor no Discord, bot para Twitch, planos mensais e missões personalizadas estão no catálogo completo.</p>
           </div>
-          <a class="button button-secondary" href="#contato">Pedir proposta <svg aria-hidden="true"><use href="#arrow"></use></svg></a>
+          <div class="custom-quest-actions">
+            <a class="button button-primary" href="servicos/">Ver todos os serviços <svg aria-hidden="true"><use href="#arrow"></use></svg></a>
+            <a class="button button-secondary" href="#contato">Pedir proposta</a>
+          </div>
         </div>
       </div>
     </section>
@@ -449,7 +463,7 @@
       </div>
       <nav class="footer-nav" aria-label="Rodapé">
         <a href="#classes">Para quem</a>
-        <a href="#power-ups">Pacotes</a>
+        <a href="servicos/">Serviços</a>
         <a href="#projetos">Projetos</a>
         <a href="blog/">Blog</a>
         <a href="#duvidas">Dúvidas</a>

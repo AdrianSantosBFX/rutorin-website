@@ -1,0 +1,42 @@
+# MOVA este arquivo para .github/workflows/testes.yml (crie as pastas .github e workflows) e faça commit.
+
+name: Testes
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '17 11 * * *'   # todo dia às 08:17 (Brasília): confere se o site no ar continua seguro
+  workflow_dispatch:
+
+jobs:
+  codigo:
+    name: Código (offline)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Formulário (função + Worker)
+        run: node --test "tests/unit/*.test.mjs"
+      - name: Links, SEO e boas práticas do HTML
+        run: node --test "tests/site/*.test.mjs"
+
+  site-no-ar:
+    name: Segurança do site no ar
+    runs-on: ubuntu-latest
+    needs: codigo
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Espera o deploy da Cloudflare terminar
+        if: github.event_name == 'push'
+        run: sleep 90
+      - name: Cabeçalhos, arquivos expostos e /api/contato
+        run: node --test "tests/seguranca/*.test.mjs"
+        env:
+          BASE_URL: https://rutorin.com

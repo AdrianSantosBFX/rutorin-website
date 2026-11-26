@@ -1,5 +1,10 @@
 # Arquivos internos do repositório que não devem ser abertos pelo navegador
 /LEIA-ME.md          /  301
 /README.md           /  301
+/wrangler.jsonc      /  301
+/.gitignore          /  301
+/.gitattributes      /  301
 /worker-contato/*    /  301
 /functions/*         /  301
+/tests/*             /  301
+/.github/*           /  301

@@ -1,0 +1,16 @@
+# Cabeçalhos de segurança aplicados pela Cloudflare Pages a todas as páginas.
+# Se ativar o Google Analytics, inclua https://www.googletagmanager.com em script-src
+# e https://*.google-analytics.com em connect-src e img-src (veja LEIA-ME.md).
+# Os valores sha256 liberam os dois pequenos scripts embutidos no HTML; se eles mudarem,
+# rode os testes de segurança (tests/) para saber o novo valor.
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+  Cross-Origin-Opener-Policy: same-origin
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo=' 'sha256-7yqNE8afOFuLH3US51Ta3rb2YkoeYquszJaFULTtVVE=' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests
+
+/api/*
+  Cache-Control: no-store

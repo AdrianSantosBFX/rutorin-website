@@ -453,6 +453,81 @@ mark.todo{padding:1px 5px;border-radius:6px;background:#ffe58a;color:#5c4400;fon
 }
 
 /* =========================================================
+   PÁGINA DE SERVIÇOS (servicos/ e en/services/)
+   ========================================================= */
+.svc-hero{padding-bottom:calc(11vw + 3rem)}
+.svc-hero .hud-chip{margin-bottom:2px}
+.svc-jumps{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.jump-link{padding:8px 16px;border:1.5px solid rgba(206,251,255,.55);border-radius:999px;background:rgba(6,14,76,.4);color:#dff4ff;font-size:.98rem;font-weight:500;text-decoration:none;transition:background .2s ease,border-color .2s ease,transform .2s ease}
+.jump-link:hover{background:rgba(48,221,255,.18);border-color:var(--cyan);transform:translateY(-2px)}
+
+/* Health Check em destaque */
+.svc-health{padding-top:clamp(2rem,4vw,3rem)}
+.svc-feature{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center;padding:clamp(1.6rem,3.5vw,2.8rem);border:2px solid var(--line);border-radius:28px;background:var(--white);box-shadow:0 8px 0 var(--chunk)}
+.svc-feature-copy h2{margin-top:16px}
+.svc-feature-copy>p{margin:0 0 22px;font-size:1.15rem;color:var(--ink-soft)}
+.svc-feature-copy .check-list{margin:0}
+.svc-feature-box{display:flex;flex-direction:column;align-items:flex-start;padding:clamp(1.5rem,3vw,2.2rem);border-radius:24px;color:var(--white);background:linear-gradient(180deg,rgba(16,53,181,.92),rgba(8,30,120,.96)),url("assets/gamer-pattern.webp") center/420px auto;box-shadow:0 8px 0 #0a2a8f}
+.svc-feature-box .class-icon{margin-bottom:16px;background:var(--navy);box-shadow:0 5px 0 #2a3f9e;color:var(--cyan)}
+.svc-feature-box .package-for{color:var(--cyan)}
+.svc-feature-box h3{margin:0 0 6px;color:var(--white);font-size:1.7rem}
+.svc-feature-box .price{color:#cfe0ff!important}
+.svc-feature-box .price strong{color:var(--white);font-size:2.8rem}
+.svc-credit{margin:-6px 0 22px;color:#dce8ff;line-height:1.5}
+.svc-feature-box .button-cta{width:100%}
+.svc-small{margin:14px 0 0;color:#b9cdfa;font-size:.92rem}
+
+/* Cards dos pacotes */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:clamp(1rem,2vw,1.6rem);align-items:stretch}
+.svc-card{display:flex;flex-direction:column}
+.svc-card h3{font-size:1.4rem}
+.svc-desc{margin:0 0 16px!important;line-height:1.5}
+.svc-card .price{margin-bottom:18px!important}
+.svc-card .price strong{font-size:2.1rem}
+.svc-card .button{margin-top:auto;width:100%}
+.svc-card-featured{border-color:var(--cyan);outline:3px solid var(--cyan);outline-offset:-1px}
+.svc-note{margin:clamp(1.4rem,3vw,2rem) 0 0;color:var(--ink-soft);font-size:1.05rem}
+.svc-note a{color:var(--blue);font-weight:600}
+
+/* Planos mensais */
+.svc-plans{display:grid;grid-template-columns:repeat(2,minmax(0,360px));justify-content:center;gap:clamp(1rem,2vw,1.6rem)}
+.svc-plan .price strong span{margin-left:4px;font-size:1.1rem;font-weight:500;color:var(--ink-soft)}
+.svc-custom-price{margin-top:10px!important;color:#bff6ff!important}
+.svc-custom-price strong{color:var(--white);font-size:1.2rem}
+
+/* Adicionais */
+.addon-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:12px;margin:0;padding:0;list-style:none}
+.addon{display:flex;align-items:center;gap:12px;padding:16px 18px;border:2px solid var(--line);border-radius:18px;background:var(--white);box-shadow:0 4px 0 var(--chunk);color:var(--navy);font-weight:500;line-height:1.3}
+.addon svg{width:22px;height:22px;flex:none;padding:4px;border-radius:50%;background:#dff6ff;color:#0a8fc2}
+.addon span{flex:1}
+.addon strong{color:var(--blue);font-weight:600;white-space:nowrap}
+
+/* Vitrine da página inicial */
+.health-strip{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;margin-top:clamp(1.6rem,3vw,2.4rem);padding:clamp(1.4rem,2.5vw,1.8rem) clamp(1.5rem,3vw,2.2rem);border:2px solid rgba(48,221,255,.7);border-radius:24px;background:rgba(6,14,76,.5);box-shadow:0 6px 0 rgba(3,12,64,.45)}
+.health-strip .package-for{color:var(--cyan)}
+.health-strip h3{margin:0 0 6px;color:var(--white);font-size:1.35rem}
+.health-strip p{margin:0;color:#cfe0ff;max-width:640px}
+.health-strip-price{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
+.health-strip-price strong{color:var(--white);font-size:1.9rem;font-weight:600;line-height:1}
+.health-strip-price small{display:block;margin-bottom:4px;color:#bff6ff;font-size:.9rem;font-weight:500}
+.health-strip-price .button-cta{width:auto}
+.health-strip+.custom-quest{margin-top:clamp(1rem,2vw,1.4rem)}
+.section-blue .link-light{color:var(--cyan);font-weight:600}
+.custom-quest-actions{display:flex;flex-wrap:wrap;gap:10px}
+
+@media(max-width:900px){
+  .svc-feature{grid-template-columns:1fr}
+  .svc-plans{grid-template-columns:1fr;max-width:420px;margin-inline:auto}
+}
+@media(max-width:540px){
+  .svc-feature{padding:1.2rem 1.2rem 1.4rem;border-radius:24px}
+  .svc-feature-copy{padding:.4rem .3rem 0}
+  .svc-feature-box{padding:1.4rem}
+  .svc-feature-box .price strong{font-size:2.4rem}
+  .health-strip-price .button,.custom-quest-actions,.custom-quest-actions .button{width:100%}
+}
+
+/* =========================================================
    RESPONSIVO
    ========================================================= */
 @media(min-aspect-ratio:19/10) and (min-width:901px){

@@ -47,7 +47,7 @@ export function validate(fields, now = Date.now()) {
 }
 
 export function buildEmail(data, env) {
-  const flag = data.idioma === 'en' ? '🇺🇸 EN' : '🇧🇷 PT';
+  const flag = data.idioma === 'en' ? 'EN' : 'PT';
   return {
     to: env.DESTINO,
     from: { email: env.REMETENTE || 'site@rutorin.com', name: 'Site Rutorin' },
@@ -94,7 +94,7 @@ export default {
       return json({ ok: true });
     } catch (error) {
       console.error('Falha ao enviar e-mail', error && error.code, error && error.message);
-      return json({ ok: false, error: 'send' }, 502);
+      return json({ ok: false, error: 'send', code: error && error.code }, 502);
     }
   },
 };
